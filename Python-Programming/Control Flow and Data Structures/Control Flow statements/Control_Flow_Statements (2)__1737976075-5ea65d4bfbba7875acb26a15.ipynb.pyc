@@ -1,0 +1,1263 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "id": "60679316",
+      "metadata": {
+        "id": "60679316"
+      },
+      "source": [
+        "# Indentation in Python\n",
+        "\n",
+        "In Python, indentation refers to the leading white space (spaces or/and tabs) before any statement. Indentation helps in defining a block of code.\n",
+        "\n",
+        "A block of code is a group of python statements with the same vertical alignment. So whereas in languages like C, C++, etc. a block of code is represented by curly braces {}, in python a block is a group of statements in the same indentation level i.e same number of leading whitespaces.\n",
+        "\n",
+        "Any number of whitespace can be used for indention in python but a minimum of one  whitespace is required.\n",
+        "\n",
+        "For the purpose of illustraion in the code below let us name the `code block 0 as cb-0`, `code block 1 as cb-1` and so on."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sorted([\"b\", \"cde\", \"a\"], key=len)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2mbUqpg7awhW",
+        "outputId": "b3eb8bf2-5905-4ef9-844b-3f3e5ef5b72a"
+      },
+      "id": "2mbUqpg7awhW",
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['b', 'a', 'cde']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "d8ef354a",
+      "metadata": {
+        "id": "d8ef354a"
+      },
+      "outputs": [],
+      "source": [
+        "## C++\n",
+        "# for (int i = 0; i < 5; i++) {\n",
+        "#  cout << i << \"\\n\";\n",
+        "# }"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "zY1GWXGGdFYv"
+      },
+      "id": "zY1GWXGGdFYv",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 11,
+      "id": "1e66c79a",
+      "metadata": {
+        "id": "1e66c79a",
+        "outputId": "f89993d7-8660-4b49-ef12-9802dd411751",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a > b\n",
+            "asdf\n"
+          ]
+        }
+      ],
+      "source": [
+        "# variables\n",
+        "a = 10 # cb-0\n",
+        "b = 5 # cb-0\n",
+        "\n",
+        "if a > b: # cb-0\n",
+        "    print(\"a > b\") # cb-1\n",
+        "else: # cb-0\n",
+        "    print(\"b > a\") # cb-1\n",
+        "\n",
+        "print(\"asdf\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "PEP8"
+      ],
+      "metadata": {
+        "id": "regTangodyIK"
+      },
+      "id": "regTangodyIK",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "id": "fea0490a",
+      "metadata": {
+        "id": "fea0490a"
+      },
+      "source": [
+        "# Control Flow Statements\n",
+        "allow you to control the flow of your program based on conditions that you specify\n",
+        "\n",
+        "Python control flow statements are divided into three categories.\n",
+        "\n",
+        "1. Conditional statement\n",
+        "2. Iterative statements\n",
+        "3. Transfer Statements\n",
+        "![control_flow.svg](attachment:control_flow.svg)\n",
+        "<center><h4>Python  Control Flow Statements</h4></center>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "cd2c82de",
+      "metadata": {
+        "id": "cd2c82de"
+      },
+      "source": [
+        "## Conditional Statements\n",
+        "\n",
+        "Conditional statements as the name suggests are used where there is a need to evaluate a certain condition and based on this condition a certain piece of code is to be executed.\n",
+        "\n",
+        "The conditional statements are used in the following ways\n",
+        "- if statement\n",
+        "- if-else\n",
+        "- if-elif-else\n",
+        "- nested if-else"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "62eb9cf8",
+      "metadata": {
+        "id": "62eb9cf8"
+      },
+      "source": [
+        "### if statement\n",
+        "\n",
+        "The simplest form of control statement is `if` statement. It takes a condition which evaluates to either `true` or `false` and the code statements in if block are executed only if the conditions outputs `true`.\n",
+        "\n",
+        "Syntax:\n",
+        "\n",
+        "<pre><span style='color:Green'>\n",
+        "        if condition:\n",
+        "            statement 1\n",
+        "            statement 2\n",
+        "            .\n",
+        "            .\n",
+        "            .\n",
+        "            statement n\n",
+        "</span></pre>\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![if.svg](attachment:if.svg)\n",
+        "\n",
+        "<b><center>Flowchart of if Statement</center></b>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 12,
+      "id": "5905061d",
+      "metadata": {
+        "id": "5905061d",
+        "outputId": "68662d4e-e8d6-41a3-ef38-758bce12b750",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "In the if block\n",
+            "Outside the if block\n"
+          ]
+        }
+      ],
+      "source": [
+        "a = 4\n",
+        "\n",
+        "if a < 5:\n",
+        "    print(\"In the if block\")\n",
+        "\n",
+        "print(\"Outside the if block\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "e3edded6",
+      "metadata": {
+        "id": "e3edded6"
+      },
+      "source": [
+        "### if-else statement\n",
+        "\n",
+        "In the if-else statement if the condition retruns true than the if block is executed and if it results false then the else block is executed.\n",
+        "\n",
+        "Syntax:\n",
+        "\n",
+        "<pre><span style='color:Green'>\n",
+        "        if condition:\n",
+        "            statement 1\n",
+        "        else:\n",
+        "            statement 2\n",
+        "</span></pre>\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![ifElse.svg](attachment:ifElse.svg)\n",
+        "<b><center>Flowchart of if-else Statement</center></b>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 25,
+      "id": "4ae0b3b5",
+      "metadata": {
+        "id": "4ae0b3b5",
+        "outputId": "2f341e19-2f1e-4887-b7eb-9b444ce13b17",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Negative number\n",
+            "Done\n",
+            "-1\n"
+          ]
+        }
+      ],
+      "source": [
+        "# program to check if a number is positive or negative\n",
+        "\n",
+        "number = -1\n",
+        "\n",
+        "if number > 0:\n",
+        "    print(\"Positive number\")\n",
+        "    num1 = 1\n",
+        "elif number < 0:\n",
+        "    print(\"Negative number\")\n",
+        "    num1 = -1\n",
+        "else:\n",
+        "    print(\"number is zero\")\n",
+        "    num1 = 0\n",
+        "print(\"Done\")\n",
+        "print(num1)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "37231d3e",
+      "metadata": {
+        "id": "37231d3e"
+      },
+      "source": [
+        "### if-elif-else statement\n",
+        "\n",
+        "To chain multiple conditional statements `elif` block(s) can be introduced within the `if-else`. This is useful when multiple conditions are required to be checked.\n",
+        "\n",
+        "Syntax:\n",
+        "\n",
+        "<pre><span style='color:Green'>\n",
+        "        if condition-1:  \n",
+        "             statement 1\n",
+        "        elif condition-2:\n",
+        "             stetement 2\n",
+        "        elif condition-3:\n",
+        "             stetement 3\n",
+        "             ...         \n",
+        "        else:            \n",
+        "             statement\n",
+        "</span></pre>\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 27,
+      "id": "297abcc6",
+      "metadata": {
+        "id": "297abcc6",
+        "outputId": "145a1edd-9bcc-4aba-b369-3d7b6d3643a8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Choose an option :\n",
+            "A: Admin\n",
+            "B: Student\n",
+            "C: Teacher\n",
+            "Q: Quit\n",
+            "\n",
+            "Your choice('A', 'B'...): 1213513\n",
+            "Wrong entry\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"\"\"Choose an option :\n",
+        "A: Admin\n",
+        "B: Student\n",
+        "C: Teacher\n",
+        "Q: Quit\n",
+        "\"\"\")\n",
+        "choice = input(\"Your choice('A', 'B'...): \")\n",
+        "if choice == 'A':\n",
+        "    print(\"Admin\")\n",
+        "elif choice == 'B':\n",
+        "    print(\"Student\")\n",
+        "elif choice == 'C':\n",
+        "    print(\"Teacher\")\n",
+        "elif choice == 'Q':\n",
+        "    print(\"Quit\")\n",
+        "else:\n",
+        "    print(\"Wrong entry\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "2a9819a3",
+      "metadata": {
+        "id": "2a9819a3"
+      },
+      "source": [
+        "### Nested if-else statement\n",
+        "\n",
+        "The nested if-else statement is an if statement inside another if-else statement. Python allows to put any number of if statementes in another if statement.\n",
+        "\n",
+        "The only way to differntiate the level of nesting is Indentation.\n",
+        "\n",
+        "Syntax:\n",
+        "\n",
+        "<pre><span style='color:Green'>\n",
+        "        if conditon_outer:\n",
+        "            if condition_inner:\n",
+        "                statement of inner if\n",
+        "            else:\n",
+        "                statement of inner else:\n",
+        "            statement of outer if\n",
+        "        else:\n",
+        "            statement of outer else\n",
+        "</span></pre>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 28,
+      "id": "b37f995b",
+      "metadata": {
+        "id": "b37f995b",
+        "outputId": "6fb212c1-e024-4f8c-d1d3-8a2326d9a87f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Greatest of given 3 numbers is:  7\n"
+          ]
+        }
+      ],
+      "source": [
+        "# program to find greater of three numbers\n",
+        "\n",
+        "a, b, c = 2, 6, 7\n",
+        "\n",
+        "if a > b:\n",
+        "    if a > c:\n",
+        "        maximum = a\n",
+        "    else:\n",
+        "        maximum = c\n",
+        "else:\n",
+        "    if b > c:\n",
+        "        maximum = b\n",
+        "    else:\n",
+        "        maximum = c\n",
+        "print(\"Greatest of given 3 numbers is: \", maximum)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "41835bbe",
+      "metadata": {
+        "id": "41835bbe"
+      },
+      "source": [
+        "## Iterative statements\n",
+        "\n",
+        "An iterative statement is used to iterate over an iterable object and execute a set of instructions on each iteration.\n",
+        "\n",
+        "In python the iterative statements are\n",
+        "- for loop\n",
+        "- while loop"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "31d0e17b",
+      "metadata": {
+        "id": "31d0e17b"
+      },
+      "source": [
+        "### for loop\n",
+        "\n",
+        "To iterate over a sequence i.e either a list, tuple, dictionary or any iterable object we can use the `for loop`. A set of instructions can be executed for each iteration\n",
+        "\n",
+        "For loops can help automate repeative tasks in an efficient manner.\n",
+        "\n",
+        "Syntax:\n",
+        "\n",
+        "<pre><span style='color:Green'>\n",
+        "        for i in range/sequencee:\n",
+        "            statement 1\n",
+        "            statement 2\n",
+        "            statement n\n",
+        "</span></pre>\n",
+        "\n",
+        "Here, `i` is the iterating variable which holds the current value in each iteration.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![for.svg](attachment:for.svg)<b><center>Flowchart of for loop</center></b>\n",
+        "\n",
+        "Here, the test condition can be seen as a check which makes sure whenever the last item of the iterable is reached the for loop needs to be terminated. We don't have to manualy specifiy any test condition."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 37,
+      "id": "00f84a1f",
+      "metadata": {
+        "id": "00f84a1f",
+        "outputId": "b9ceddbd-1794-468c-af79-06b1d4233c50",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "\n",
+            "2\n",
+            "4\n",
+            "\n",
+            "3\n",
+            "6\n",
+            "\n",
+            "4\n",
+            "8\n",
+            "\n",
+            "5\n",
+            "10\n",
+            "\n",
+            "[1, 2, 3]\n",
+            "[1, 2, 3, 1, 2, 3]\n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "# square and print the elements of a list in a single line seperated by \",\"\n",
+        "\n",
+        "lst = [1, 2, 3, 4, 5, [1, 2, 3]]\n",
+        "\n",
+        "for item in lst:\n",
+        "    print(item)\n",
+        "    print(item*2)\n",
+        "    print()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "3fd87a71",
+      "metadata": {
+        "id": "3fd87a71"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "id": "3d494ba0",
+      "metadata": {
+        "id": "3d494ba0"
+      },
+      "source": [
+        "#### for loop with range()\n",
+        "\n",
+        "The `range()` function generates a immutable sequence of numbers starting from 0 (by default) if the initial limit is not provided and the values are incremented by 1 (by default) until the final limit is reached.\n",
+        "\n",
+        "The range() function is generally used with for loop to specify the range (how many times) the code block will be executed.\n",
+        "\n",
+        "syntax of range():\n",
+        "\n",
+        "    range(start, stop, step)\n",
+        "    here, start has a default value of 0 and step has a defualt value of 1.\n",
+        "    \n",
+        "    start: (Lower limit) It is the starting position of the sequence. The default value is 0 if not specified. For example, range(0, 10). Here, start=0 and stop = 10\n",
+        "    \n",
+        "    stop: (Upper limit) generate numbers up to this number, i.e., An integer number specifying at which position to stop (upper limit). The range() never includes the stop number in its result\n",
+        "    \n",
+        "    step: Specify the increment value. Each next number in the sequence is generated by adding the step value to a preceding number. The default value is 1 if not specified. It is nothing but a difference between each number in the result. For example, range(0, 6, 1). Here, step = 1.\n",
+        "\n",
+        "[pynative range explantion](https://pynative.com/python-range-function/)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "3eb1ed8a",
+      "metadata": {
+        "id": "3eb1ed8a",
+        "outputId": "feb2ac23-5e81-4627-f8d2-1e96307246e2"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[0, 1, 2, 3, 4]"
+            ]
+          },
+          "execution_count": 35,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "list(range(5))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "874e7546",
+      "metadata": {
+        "id": "874e7546"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "83488154",
+      "metadata": {
+        "id": "83488154",
+        "outputId": "39cd2764-5589-497c-e859-da1aac27f23c"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 4, 5]"
+            ]
+          },
+          "execution_count": 36,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "list(range(1,6))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "19f75c41",
+      "metadata": {
+        "id": "19f75c41",
+        "outputId": "049a3341-8ccb-40ad-8ffe-c12cca1b2243"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[1, 3, 5]"
+            ]
+          },
+          "execution_count": 37,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "list(range(1,6,2))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "8549f67a",
+      "metadata": {
+        "id": "8549f67a",
+        "outputId": "5cb60707-5f30-42c9-a39d-fcc41e7571d7"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "range(1, 6, 2)"
+            ]
+          },
+          "execution_count": 41,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "range(1,6,2)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "abc751da",
+      "metadata": {
+        "id": "abc751da",
+        "outputId": "3c05bc00-6cf8-442d-d83b-ea73394785de"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "1\n",
+            "3\n",
+            "5\n"
+          ]
+        }
+      ],
+      "source": [
+        "# using for loop with range()\n",
+        "for i in range(1,6,2):\n",
+        "    print(i)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "lst1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n",
+        "\n",
+        "minimum_length = min(len(lst), len(lst1))\n",
+        "\n",
+        "for i in range(-4, minimum_length, 2):\n",
+        "\n",
+        "    print(\"i: \", i)\n",
+        "    print(lst[i], lst1[i])\n",
+        "    print(lst[i] + lst1[i])\n",
+        "    print()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ujToWnuDl6IT",
+        "outputId": "6a61cdc9-7d2e-4fdb-c9c6-a1bc6b0cc4d1"
+      },
+      "id": "ujToWnuDl6IT",
+      "execution_count": 48,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "i:  -4\n",
+            "7 9\n",
+            "16\n",
+            "\n",
+            "i:  -2\n",
+            "9 11\n",
+            "20\n",
+            "\n",
+            "i:  0\n",
+            "1 1\n",
+            "2\n",
+            "\n",
+            "i:  2\n",
+            "3 3\n",
+            "6\n",
+            "\n",
+            "i:  4\n",
+            "5 5\n",
+            "10\n",
+            "\n",
+            "i:  6\n",
+            "7 7\n",
+            "14\n",
+            "\n",
+            "i:  8\n",
+            "9 9\n",
+            "18\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "55c7e20b",
+      "metadata": {
+        "id": "55c7e20b"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "be16df3e",
+      "metadata": {
+        "id": "be16df3e"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "id": "edf83b42",
+      "metadata": {
+        "id": "edf83b42"
+      },
+      "source": [
+        "### while loop\n",
+        "\n",
+        "The while loop in python repeats a set of operations while a particular condition is true and as soon as the condition results false the loop stops.\n",
+        "\n",
+        "In while loop at the start of each iteration first the condition is evaluated and if the resulted output of the condition is true only than the iteration begins else the loop breaks.\n",
+        "\n",
+        "- while loops are used when we don't know the number of iterations. For example consider making a program where the user is expected to make a guess for a number drawn at random, it this scenario we don't know the fixed number of times that the user might take to guess the number correctly. Such kind of situations can be handled with the while loop\n",
+        "\n",
+        "Syntax:\n",
+        "\n",
+        "<pre><span style='color:Green'>\n",
+        "        while condition :\n",
+        "            body of while loop\n",
+        "</span></pre>\n",
+        "here, condition is an expression which results in either True or False\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![while.svg](attachment:while.svg)<b><center>Flowchart of while loop</center></b>\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 55,
+      "id": "2e8cd464",
+      "metadata": {
+        "id": "2e8cd464",
+        "outputId": "116c4981-676f-4937-e537-2088a3674a79",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Choose an option:\n",
+            "    A: Admin\n",
+            "    B: Student\n",
+            "    C: Teacher\n",
+            "    Q: Quit\n",
+            "    \n",
+            "Your choice('A', 'B'...): dafsd\n",
+            "Wrong entry\n"
+          ]
+        }
+      ],
+      "source": [
+        "choice = ''\n",
+        "\n",
+        "while choice != 'Q':\n",
+        "    print(\"\"\"Choose an option:\n",
+        "    A: Admin\n",
+        "    B: Student\n",
+        "    C: Teacher\n",
+        "    Q: Quit\n",
+        "    \"\"\")\n",
+        "    choice = input(\"Your choice('A', 'B'...): \")\n",
+        "\n",
+        "    if choice == 'A':\n",
+        "        print(\"Admin\")\n",
+        "    elif choice == 'B':\n",
+        "        print(\"Student\")\n",
+        "    elif choice == 'C':\n",
+        "        print(\"Teacher\")\n",
+        "    elif choice == 'Q':\n",
+        "        print(\"Quit\")\n",
+        "    else:\n",
+        "        print(\"Wrong entry\")\n",
+        "        break"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "96c4fa2f",
+      "metadata": {
+        "id": "96c4fa2f"
+      },
+      "source": [
+        "## Transfer Statements\n",
+        "\n",
+        "The transfer statements in python are used to alter the program's way of execution in a certain manner.\n",
+        "\n",
+        "There are three types of transer statements in python\n",
+        "\n",
+        "- break\n",
+        "- continue\n",
+        "- pass"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "15aeb4d1",
+      "metadata": {
+        "id": "15aeb4d1"
+      },
+      "source": [
+        "### break statement\n",
+        "\n",
+        "It is used inside a loop to exit out of the loop instantly.\n",
+        "\n",
+        "When a break statement is encountered inside a loop, the loop is immediately terminated, and the program control transfers to the next statement following the loop. In simple words, break keyword kills the loop containing it.\n",
+        "\n",
+        "if the break statement is used in a nested loop i.e a loop inside the loop than only the innermost loop will terminate"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 71,
+      "id": "44cc6dc9",
+      "metadata": {
+        "id": "44cc6dc9",
+        "outputId": "5bba35bc-61af-4ca9-9e2a-e68667a0be30",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5.0\n",
+            "2.5\n",
+            "0.06666666666666667\n",
+            "0.11904761904761904\n",
+            "0.1\n",
+            "Negative number encounterd: -5\n",
+            "0.7142857142857143\n",
+            "asdfasd\n",
+            "0.05\n",
+            "0.04950495049504951\n",
+            "0.049019607843137254\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Iterate over a list/tuple and print the values. break the loop if a negative number is encounterd\n",
+        "\n",
+        "lst = [1, 2, 75, 42, 50, -5, 7, 0, 100, 101, 102]\n",
+        "\n",
+        "for number in lst:\n",
+        "\n",
+        "    if number < 0:\n",
+        "        print(\"Negative number encounterd:\", number)\n",
+        "        continue\n",
+        "    elif number == 0:\n",
+        "        pass\n",
+        "    else:\n",
+        "        print(5 / number)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 53,
+      "id": "197ea3ea",
+      "metadata": {
+        "id": "197ea3ea",
+        "outputId": "d97ad508-d444-44eb-8335-7a23bc096c8e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "75\n",
+            "42\n",
+            "50\n",
+            "5\n",
+            "7\n",
+            "8\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Iterate over a list/tuple and print the values. break the loop if a negative number is encounterd\n",
+        "\n",
+        "lst = [1, 2, 75, 42, 50, 5, 7, 8]\n",
+        "length = len(lst)\n",
+        "index=0\n",
+        "\n",
+        "while index < length:\n",
+        "    if lst[index] < 0:\n",
+        "        print(\"Negative number encounterd:\", number)\n",
+        "        break\n",
+        "    else:\n",
+        "        print(lst[index])\n",
+        "        index += 1  # index = index + 1"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "ea773808",
+      "metadata": {
+        "id": "ea773808"
+      },
+      "source": [
+        "### continue statement\n",
+        "\n",
+        "It is used to skip the current iteration of a loop and move to next iteration. When a continue statement is used inside a loop in python, the code after the continue is skiped and the control of the program is sent to the next iteration of the loop."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 67,
+      "id": "c8b62dd0",
+      "metadata": {
+        "id": "c8b62dd0",
+        "outputId": "624a086e-47d2-4bcc-9504-4ceb746a1e78",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "square of: {1}   {1}\n",
+            "square of: {-2}   {4}\n",
+            "square of: {-5}   {25}\n",
+            "Skiping the loop at number: 10\n",
+            "asdfasdfasdf\n"
+          ]
+        }
+      ],
+      "source": [
+        "# program to square numbers less than 10 while iterating a list/tuple\n",
+        "\n",
+        "lst = [1, -2, -5, 10, 5, 9, 12]\n",
+        "\n",
+        "for number in lst:\n",
+        "    if number >=10:\n",
+        "        print(\"Skiping the loop at number:\", number)\n",
+        "        break\n",
+        "        print(\"asdfasdfasdf\")\n",
+        "\n",
+        "    print(\"square of:\", {number}, \" \", {number**2})\n",
+        "\n",
+        "print('asdfasdfasdf')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if 3 == 3:\n",
+        "    pass"
+      ],
+      "metadata": {
+        "id": "1MKrvgbYuZa3"
+      },
+      "id": "1MKrvgbYuZa3",
+      "execution_count": 64,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "id": "ece582f1",
+      "metadata": {
+        "id": "ece582f1"
+      },
+      "source": [
+        "### pass statement\n",
+        "\n",
+        "The pass is the keyword In Python, which won’t do anything. Sometimes there is a situation in programming where we need to define a syntactically empty block. We can define that block with the pass keyword.\n",
+        "\n",
+        "A pass statement is a Python null statement. When the interpreter finds a pass statement in the program, it returns no operation. Nothing happens when the pass statement is executed.\n",
+        "\n",
+        "[reference](https://pynative.com/python-break-continue-pass/#:~:text=%C2%A0Run-,Pass%20Statement%20in%20Python,-The%20pass%20is)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 60,
+      "id": "3c09d610",
+      "metadata": {
+        "id": "3c09d610",
+        "outputId": "27e0239c-5d41-423f-b568-fc7469beace0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n"
+          ]
+        }
+      ],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "id": "e63154b2",
+      "metadata": {
+        "id": "e63154b2"
+      },
+      "source": [
+        "### Creating a simple calculator using python\n",
+        "\n",
+        "We will be using the concept of loops and if-else statements to create a simple calulator program which works on two operands.\n",
+        "\n",
+        "The calculator can perform the following operations\n",
+        "- Addition\n",
+        "- Subtraction\n",
+        "- Multiplication\n",
+        "- Division"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "9282d9ff",
+      "metadata": {
+        "id": "9282d9ff",
+        "outputId": "3cd47d44-aeef-4c45-c271-77aea316f33e"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "\n",
+            "    Select the operation that you want to perform\n",
+            "    +: Addition\n",
+            "    -: Subtraction\n",
+            "    *: Multiplication\n",
+            "    /: Division\n",
+            "    Q: Quit\n",
+            "    \n",
+            "Select +, -, *, / or Q: +\n",
+            "Enter the 1st operand: 1\n",
+            "Enter the 2nd operand: 3\n",
+            "Addition of 1.0 and 3.0 = 4.0\n",
+            "\n",
+            "    Select the operation that you want to perform\n",
+            "    +: Addition\n",
+            "    -: Subtraction\n",
+            "    *: Multiplication\n",
+            "    /: Division\n",
+            "    Q: Quit\n",
+            "    \n",
+            "Select +, -, *, / or Q: *\n",
+            "Enter the 1st operand: 2\n",
+            "Enter the 2nd operand: 3\n",
+            "Multiplication of 2.0 and 3.0 = 6.0\n",
+            "\n",
+            "    Select the operation that you want to perform\n",
+            "    +: Addition\n",
+            "    -: Subtraction\n",
+            "    *: Multiplication\n",
+            "    /: Division\n",
+            "    Q: Quit\n",
+            "    \n",
+            "Select +, -, *, / or Q: Q\n",
+            "Exiting the calculator program\n"
+          ]
+        }
+      ],
+      "source": [
+        "operator = ''\n",
+        "\n",
+        "while operator != 'Q':\n",
+        "    print(\"\"\"\n",
+        "    Select the operation that you want to perform\n",
+        "    +: Addition\n",
+        "    -: Subtraction\n",
+        "    *: Multiplication\n",
+        "    /: Division\n",
+        "    Q: Quit\n",
+        "    \"\"\")\n",
+        "    operator = input(\"Select +, -, *, / or Q: \")\n",
+        "    if operator == '+':\n",
+        "        operand_1 = float(input(\"Enter the 1st operand: \"))\n",
+        "        operand_2 = float(input(\"Enter the 2nd operand: \"))\n",
+        "        print(f\"Addition of {operand_1} and {operand_2} = {operand_1 + operand_2}\")\n",
+        "    elif operator == '-':\n",
+        "        operand_1 = float(input(\"Enter the 1st operand: \"))\n",
+        "        operand_2 = float(input(\"Enter the 2nd operand: \"))\n",
+        "        print(f\"Subtraction of {operand_1} and {operand_2} = {operand_1 - operand_2}\")\n",
+        "    elif operator == '*':\n",
+        "        operand_1 = float(input(\"Enter the 1st operand: \"))\n",
+        "        operand_2 = float(input(\"Enter the 2nd operand: \"))\n",
+        "        print(f\"Multiplication of {operand_1} and {operand_2} = {operand_1 * operand_2}\")\n",
+        "    elif operator == '/':\n",
+        "        operand_1 = float(input(\"Enter the 1st operand: \"))\n",
+        "        operand_2 = float(input(\"Enter the 2nd operand: \"))\n",
+        "        print(f\"Division of {operand_1} and {operand_2} = {operand_1 / operand_2}\")\n",
+        "    elif operator == 'Q':\n",
+        "        print(\"Exiting the calculator program\")\n",
+        "        break\n",
+        "    else:\n",
+        "        print(\"\\n\\nPlease enter a valid choice\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "c3099bd8",
+      "metadata": {
+        "id": "c3099bd8"
+      },
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 68,
+      "id": "9cfd6a54",
+      "metadata": {
+        "id": "9cfd6a54",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 391
+        },
+        "outputId": "62692e76-7a8d-4969-9bef-f7e025449faa"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "asdfasd\n",
+            "asdfasd\n",
+            "fgd\n",
+            "fgd\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "Interrupted by user",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-68-272172baf355>\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;32mwhile\u001b[0m \u001b[0;32mTrue\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m     \u001b[0mpt\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mpt\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m    849\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    850\u001b[0m             )\n\u001b[0;32m--> 851\u001b[0;31m         return self._input_request(str(prompt),\n\u001b[0m\u001b[1;32m    852\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    853\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_header\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    893\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    894\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 895\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    896\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0me\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    897\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
+          ]
+        }
+      ],
+      "source": [
+        "while True:\n",
+        "    pt = input()\n",
+        "    print(pt)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "af1b649a",
+      "metadata": {
+        "id": "af1b649a"
+      },
+      "outputs": [],
+      "source": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3 (ipykernel)",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.9.13"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
