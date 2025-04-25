@@ -1,0 +1,6146 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5PvDeQtON6tS"
+      },
+      "source": [
+        "# <font color='green'>Data</font>\n",
+        "Data is a crucial part when it comes to programming. So managing it becomes a mandatory action."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ujV26tjtN6tU"
+      },
+      "source": [
+        "#  <font color='green'>Data Structures</font>\n",
+        "\n",
+        "###### A data structure is a specialized format for organizing, processing, retrieving and storing data. Each data structure contains information about the data values, relationships between the data and functions that can be applied to the data.\n",
+        "\n",
+        "\n",
+        "##  <font color='green'>There are two types of Data Structures</font>\n",
+        "* Built-in Data Structure\n",
+        "* User-Defined Data Structure\n",
+        "\n",
+        "<img src=\"https://miro.medium.com/v2/resize:fit:720/format:webp/1*1aYIbTXZtUB4MfpSirGohA.png\">\n",
+        "\n",
+        "###  <font color='green'>Python has four basic inbuilt data structures namely:</font>\n",
+        "* Lists\n",
+        "* Dictionary\n",
+        "* Tuple\n",
+        "* Set\n",
+        "\n",
+        "###  <font color='green'>There are many operations that can be performed to process data in Data Structure:</font>\n",
+        "* Traversing\n",
+        "* Searching\n",
+        "* Insertion\n",
+        "* Deletion\n",
+        "* Sorting\n",
+        "* Merging\n",
+        "\n",
+        "####  <font color='green'>Some Important Terms</font>\n",
+        "* <font color='red'>Mutability and Order</font>:\n",
+        "Mutability is something about whether we can change or not an object once it is created. If we can change it then it is called mutable else it is called immutable. Order is something about whether we can use the index (position)of an object to access the element."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5_znZlFMN6tV"
+      },
+      "source": [
+        "# <font color='green'>Let's start with List</font>\n",
+        "* Lists are accessed just like strings (e.g. slicing and concatenation) so they are simple to use and they’re variable length, i.e. they grow and shrink automatically as they’re used.\n",
+        "* They are used to store data of different data types in a <font color='green'>sequential manner</font>.\n",
+        "* Lists are created using square brackets, [].\n",
+        "* Each item in a list is separated by a comma.\n",
+        "* List items are <font color='green'>indexed</font>, the first item has index [0], the second item has index [1] etc.\n",
+        "* List items are <font color='green'>ordered</font> and allow duplicate values.\n",
+        "* Lists are <font color='green'>mutable</font>, which means they can be changed.\n",
+        "* Python’s lists are implemented as <font color='green'>dynamic arrays</font> behind the scenes."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wBaQzb5WU_FL"
+      },
+      "source": [
+        "# **List Declaration and Initialisation**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grocery_list = []\n",
+        "grocery_list = ['cake', 'milk']\n",
+        "number_list = [1, 2, 3, 4, 4, 4, 4]\n",
+        "\n",
+        "# grocery_list[-1]\n",
+        "number_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3SiFx20UEloq",
+        "outputId": "b894202d-280b-48ae-fe8b-0dfd6dacd6ad"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 4, 4, 4, 4]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grocery_list.append('chips')\n",
+        "grocery_list.append(3)\n",
+        "grocery_list.insert(0, 'milk')\n",
+        "grocery_list.insert(1, 'cake')\n",
+        "\n",
+        "\n",
+        "grocery_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4UKCGd_mGNBs",
+        "outputId": "60955dbf-f081-4816-8d20-e980d6f5abca"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['milk', 'cake', 'cake', 'milk', 'chips', 3]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "temp = grocery_list[0]\n",
+        "grocery_list[0] = grocery_list[1]\n",
+        "grocery_list[1] = temp"
+      ],
+      "metadata": {
+        "id": "go__PYwsG4Xe"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grocery_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "U5hgKPzlG4Uk",
+        "outputId": "c6545157-c46a-4040-e529-5aafc7568e96"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['cake', 'milk', 'cake', 'milk', 'chips', 'chips', 3, 'chips', 3]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grocery_list[0], grocery_list[1] = grocery_list[1], grocery_list[0]"
+      ],
+      "metadata": {
+        "id": "35q2eVkhH3CJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grocery_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2pkYGlMtH7nX",
+        "outputId": "2ade513b-8f89-4746-90b4-3ade3ae7eeda"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['milk', 'cake', 'cake', 'milk', 'chips', 'chips', 3, 'chips', 3]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "-idvNcXuN6tW",
+        "outputId": "9a7d4c92-e1e8-4b71-c829-7be468de8c39"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "[]\n",
+            "[100, 'Hi', 3, 'There', 500]\n"
+          ]
+        }
+      ],
+      "source": [
+        "'''To create a list, you use the square brackets and add elements into it accordingly.\n",
+        "If you do not pass any elements inside the square brackets, you get an empty list as the output.'''\n",
+        "\n",
+        "my_list = [] #create empty list\n",
+        "print(my_list)\n",
+        "my_list = [100, 'Hi', 3, 'There', 500] #creating list with different type of data\n",
+        "print(my_list)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "_p7JrFBnN6tX",
+        "outputId": "65c56dfc-53fb-4133-b465-1618515c59d1"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "'There'"
+            ]
+          },
+          "metadata": {},
+          "output_type": "display_data"
+        }
+      ],
+      "source": [
+        "## access 2nd element in the list\n",
+        "my_list[1]\n",
+        "## access 2nd element from the tail of the list\n",
+        "my_list[-2]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zstnYq_FPc41",
+        "outputId": "5e41e8cd-4e83-48e6-8f25-6f31fcd00f29"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['t-shirt', 'trouser', 'shoes']\n"
+          ]
+        }
+      ],
+      "source": [
+        "cart = []\n",
+        "cart = [\"t-shirt\", \"trouser\", \"shoes\"]\n",
+        "print(cart)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart[]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "kt0sVYvOLTVr",
+        "outputId": "a784d2ae-a316-443d-f1b5-39d319e44886"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'t-shirt'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fff0madBN6tY"
+      },
+      "source": [
+        "# <font color='green'>**Adding Elements to List**</font>\n",
+        "\n",
+        "Adding the elements in the list can be achieved using the append(), extend() and insert() functions.\n",
+        "\n",
+        "* <font color='red'>*The append()*</font>   function adds all the elements passed to it as a single element.The method doesn't return any value (returns None)\n",
+        "                 \n",
+        "                 \n",
+        "* <font color='red'>*The extend()*</font> function adds the elements one-by-one into the list in other words The extend() method adds all the elements of an iterable (list, tuple, string etc.) to the end of the list. The method doesn't return any value (returns None)\n",
+        "\n",
+        "                 \n",
+        "* <font color='red'>*The insert()*</font>    function adds the element passed to the index value and increase the size of the list too. The syntax of the insert() method is\n",
+        "\n",
+        "                 list.insert(i, elem)\n",
+        "\n",
+        "  Here, elem is inserted to the list at the ith index. All the elements after elem are shifted to the right. The insert() method doesn't return anything; returns None. It only updates the current list.'''"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Wj8NLyAQWOz_"
+      },
+      "source": [
+        "# **List Append**"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "g-lYrmpqWjZ_"
+      },
+      "source": [
+        "# **`List Extend`**\n",
+        "Extend is used to merge two lists\n",
+        "\"+\" can also be used to merge two list"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "njDiAn30WiaH",
+        "outputId": "96283cfe-73df-40bd-c1f0-c1f6149d8ff5"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "['rubber',\n",
+              " 'trouser',\n",
+              " 'shoes',\n",
+              " 'tracksuit',\n",
+              " 'watch',\n",
+              " 'goggle',\n",
+              " 'watch',\n",
+              " 'goggles']"
+            ]
+          },
+          "execution_count": 12,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "cart.extend([\"watch\", \"goggles\"])\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart2 = [\"watch\", \"goggles\"]"
+      ],
+      "metadata": {
+        "id": "2WQXJFdoJ8Fo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart = cart + cart2\n",
+        "cart"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pt1liLR_J79_",
+        "outputId": "8fb23581-e546-4724-c34f-818efba868f9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['t-shirt', 'trouser', 'shoes', 'watch', 'goggles']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "y8XEqGlRCmdj",
+        "outputId": "fc3b89ac-be67-48f4-abd0-0578a3771960"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "['rubber', 'trouser', 'shoes', 'tracksuit', 'watch', 'goggle']"
+            ]
+          },
+          "execution_count": 13,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "\n",
+        "cart = ['t-shirt', 'trouser', 'shoes', 'tracksuit', 'watch', 'goggle']\n",
+        "cart[0] = 'rubber'\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v6FEYB3glcnA",
+        "outputId": "0ba9f1bb-8558-4233-fc9a-fce3370a70b0"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 4, 5]"
+            ]
+          },
+          "execution_count": 14,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "num1 = [1,2,3]\n",
+        "num2 = [4,5]\n",
+        "final = num1 + num2\n",
+        "final"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NlahiHdpYpiv"
+      },
+      "source": [
+        "# **List Insert**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "_7Gvs62sN6tZ",
+        "outputId": "6edc8015-df8c-4fd9-cd89-e457ef42b1e5"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [555, 12]]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [555, 12], 234, 'string_data']\n",
+            "[1, 2, 3, 4, 5, 'insert_element', 6, 7, 8, 9, 10, [555, 12], 234, 'string_data']\n"
+          ]
+        }
+      ],
+      "source": [
+        "my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "print(my_list)\n",
+        "my_list.append([555, 12]) #add as a single element\n",
+        "print(my_list)\n",
+        "my_list.extend([234, 'string_data']) #add as different elements\n",
+        "print(my_list)\n",
+        "my_list.insert(5, 'insert_element') #add element i\n",
+        "print(my_list)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_UfEafGSWSNi",
+        "outputId": "f9e4a39a-c0d4-45ea-9048-2fd35663451b"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "['shirt', 'pant', 'trousers', 'T-shirts', 'tracksuit']"
+            ]
+          },
+          "execution_count": 3,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "cart = ['shirt', 'pant', 'trousers', 'T-shirts']\n",
+        "cart.append(\"tracksuit\")\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "F8CZQngjYonD",
+        "outputId": "bca8a764-130d-488a-f15b-00ea43d608a2"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "['rubber', 'shirt', 'trouser', 'shoes', 'tracksuit', 'watch', 'goggle']"
+            ]
+          },
+          "execution_count": 15,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "# syntax: list.insert(index, item)\n",
+        "cart.insert(1, \"shirt\")\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "F4E4jmYqWb63"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# ***Debugging Derby:***"
+      ],
+      "metadata": {
+        "id": "unOuuem9Wb_4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Question 1:\n",
+        "\n",
+        "Declare one blank list and then add four items to it.\n",
+        "\n",
+        "Question 2:\n",
+        "\n",
+        "Initialize a list with first 10 natural numbers\n",
+        "\n",
+        "Question 3:\n",
+        "\n",
+        "Initialize a lsit with first 10 odd numbers\n",
+        "\n",
+        "Question 4:\n",
+        "\n",
+        "Initialise a list with first 10 even numbers:\n",
+        "\n",
+        "Question 5:\n",
+        "\n",
+        "Check if a list contains an element\n",
+        "\n",
+        "Question 6:\n",
+        "\n",
+        "Append all the months name in a list named year in one go\n",
+        "\n",
+        "Question 7:\n",
+        "\n",
+        "Insert a values at the begining of a list\n"
+      ],
+      "metadata": {
+        "id": "nTkcHDVqWcEQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solution 1:\n",
+        "\n",
+        "lst = []\n",
+        "\n",
+        "lst.append(1)\n",
+        "lst.append(2)\n",
+        "lst.append(3)\n",
+        "lst.append(4)\n",
+        "lst"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eIXIHcsQiEaB",
+        "outputId": "47f7c306-9bdd-4944-c147-2925982b3f71"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 4]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solution 2:\n",
+        "\n",
+        "nat_numbers = []\n",
+        "for i in range(1, 11):\n",
+        "    nat_numbers.append(i)\n",
+        "print(nat_numbers)"
+      ],
+      "metadata": {
+        "id": "6-kUeXlPWcIV",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1469d9b0-81dd-4bd1-b3a6-d0ed7518b923"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solution 3:\n",
+        "\n",
+        "odd_numbers = []\n",
+        "for i in range(1, 21):\n",
+        "    odd_numbers.append(i) if i%2==1 else None\n",
+        "print(odd_numbers)"
+      ],
+      "metadata": {
+        "id": "ZFddYl9eWv3F",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "28f6b3d6-2854-4976-810c-2ba2957c899a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solution 4:\n",
+        "\n",
+        "even_numbers = []\n",
+        "for i in range(1, 21):\n",
+        "    even_numbers.append(i) if i%2==0 else None\n",
+        "print(even_numbers)"
+      ],
+      "metadata": {
+        "id": "M3RdHSrPWv8t",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b1587530-e1c3-4604-82df-69c14f156ab9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solution 5:\n",
+        "\n",
+        "list = [1,2,3,4,5,6,7,8,9,10]\n",
+        "\n",
+        "print(10 in list)"
+      ],
+      "metadata": {
+        "id": "7qw3pVlzWwBk",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d84dd560-f61e-451f-cb2f-38d46949eb0a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solution 6:\n",
+        "\n",
+        "year = []\n",
+        "year.extend(['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])\n",
+        "year"
+      ],
+      "metadata": {
+        "id": "ze1_SRMTWwGH",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "532ce83e-1683-4b14-d8ea-92ea64e7a1fb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['January',\n",
+              " 'Feburary',\n",
+              " 'March',\n",
+              " 'April',\n",
+              " 'May',\n",
+              " 'June',\n",
+              " 'July',\n",
+              " 'August',\n",
+              " 'September',\n",
+              " 'October',\n",
+              " 'November',\n",
+              " 'December']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solution 7:\n",
+        "\n",
+        "year.insert(0, 'Happy New Year')\n",
+        "year"
+      ],
+      "metadata": {
+        "id": "sFo0a1MnX_Yr",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9a56c0ae-89ec-439a-a97e-42c813aa6c8d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Happy New Year',\n",
+              " 'January',\n",
+              " 'Feburary',\n",
+              " 'March',\n",
+              " 'April',\n",
+              " 'May',\n",
+              " 'June',\n",
+              " 'July',\n",
+              " 'August',\n",
+              " 'September',\n",
+              " 'October',\n",
+              " 'November',\n",
+              " 'December']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Ec7a0S5gN6tb"
+      },
+      "source": [
+        "# <font color='green'>**Deleting Elements from a List**</font>\n",
+        "\n",
+        "* <font color='red'>**del**</font>: To delete elements, use the del keyword which is built-in into Python, but this does not return anything back to us. The syntax of del statement is:\n",
+        "\n",
+        "                          del obj_name\n",
+        "\n",
+        "  Here, del is a Python keyword. And, obj_name can be variables, user-defined objects, lists, items within lists, dictionaries etc.\n",
+        "* <font color='red'>**pop()**</font>: If you want the element back, you use the pop() function which takes the index value. The pop() method removes the item at the given index from the list and returns the removed item.\n",
+        "\n",
+        "    ** The pop() method takes a single argument (index).\n",
+        "    \n",
+        "    ** The argument passed to the method is optional. If not passed, the default index -1 is passed as an argument     (index of the last item).\n",
+        "    \n",
+        "    ** If the index passed to the method is not in range, it throws IndexError: pop index out of range exception.\n",
+        "    \n",
+        "    ** The pop() method returns the item present at the given index. This item is also removed from the list.\n",
+        "    \n",
+        "\n",
+        "* <font color='red'>**remove()**</font>: To remove an element by its value, you use the remove() function. The remove() method removes the first matching element (which is passed as an argument) from the list.\n",
+        "\n",
+        "    ** The remove() method takes a single element as an argument and removes it from the list.\n",
+        "    \n",
+        "    ** If the element doesn't exist, it throws ValueError: list.remove(x): x not in list exception.\n",
+        "    \n",
+        "    ** The remove() doesn't return any value (returns None).\n",
+        "    \n",
+        "    \n",
+        "\n",
+        "* <font color='red'>**clear()**</font>:  The clear() method removes all items from the list. The clear() method only empties the given list. It doesn't return any value."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VdGyehTNN6tb"
+      },
+      "source": [
+        "# **List Delete**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "yxjtimLGN6tb",
+        "outputId": "260eaf16-ca60-463b-c96f-6ebdfe952e4e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 'example', 3.132, 'example', [30, '2']]\n"
+          ]
+        }
+      ],
+      "source": [
+        "my_list = [1, 2, 3, 'example', 3.132, 10, 'example', [30,'2']]\n",
+        "del my_list[5] #delete element at index 5\n",
+        "print(my_list)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Tmvyz_NnZGak"
+      },
+      "source": [
+        "# **List Remove**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "33Oyo92uN6tb",
+        "outputId": "fe5965be-ddfd-4ba2-8c5e-8d5683f01568"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "[1, 2, 3, 3.132, 'example', [30, '2']]\n"
+          ]
+        }
+      ],
+      "source": [
+        "my_list.remove('example') #remove element with value(from the first occurence)\n",
+        "print(my_list)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ORmh5DmtZTiz",
+        "outputId": "8275343f-f7b3-4f52-f66b-541d6703d42a"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "['shirt', 'trouser', 'shoes', 'tracksuit', 'watch', 'goggle']"
+            ]
+          },
+          "execution_count": 20,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "cart.remove(\"rubber\")\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "n1aEySkhauXk"
+      },
+      "source": [
+        "# **List Pop**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "0JUuW1YrN6tc",
+        "outputId": "0b7a6d80-5bc4-45af-9c1b-0658d9a2255a"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Popped Element:  3.132  List remaining:  [1, 2, 3, 'example', [30, '2']]\n"
+          ]
+        }
+      ],
+      "source": [
+        "a = my_list.pop(3) #pop element from list, if no index is given it will pop the last element in the list\n",
+        "print('Popped Element: ', a, ' List remaining: ', my_list)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "eknfeawyaIiZ",
+        "outputId": "86d626c6-5692-461e-c19f-0b8dbc3c0148"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "'goggle'"
+            ]
+          },
+          "execution_count": 22,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "# syntax: list.pop([index])\n",
+        "last_item = cart.pop()\n",
+        "last_item"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_J4da9NTa7Ur",
+        "outputId": "248315eb-1dca-4183-aae9-26e04d0fb53c"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "['shirt', 'trouser', 'tracksuit', 'watch']"
+            ]
+          },
+          "execution_count": 23,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "cart.pop(2)\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4lFWoG7DN6tc"
+      },
+      "source": [
+        "# **List Clear**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Su9wokeNN6tc",
+        "outputId": "0145ca17-3855-4ece-ffd2-7259fd48e750"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "[]\n"
+          ]
+        }
+      ],
+      "source": [
+        "my_list.clear() #empty the list\n",
+        "print(my_list)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "MzbToOA6kuYv"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## ***Syntax ShowDown***\n",
+        "\n",
+        "Question 1: Write a Python program to remove an element from a list at a specific index.\n",
+        "\n",
+        "Question 2: Write a Python program to remove the last element from a list.\n",
+        "\n",
+        "Question 3: Write a Python program to remove the first element from a list.\n",
+        "\n",
+        "Question 4: Write a Python program to pop an element from a list at a specific index.\n",
+        "\n",
+        "Question 5: Write a Python program to remove elements from a list based on a certain condition.\n",
+        "\n",
+        "Question 6: Write a Python program to remove all elements from a list."
+      ],
+      "metadata": {
+        "id": "eOAgsZaakMkW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solution 1:\n",
+        "\n",
+        "print('\\nSolution 1')\n",
+        "my_list = [1, 2, 3, 4, 5]\n",
+        "del my_list[2]   # Remove the element at index 2\n",
+        "print(my_list)   # Output: [1, 2, 4, 5]\n",
+        "\n",
+        "\n",
+        "# Solution 2:\n",
+        "print('\\nSolution 2')\n",
+        "my_list = [1, 2, 3, 2, 4, 2, 5]\n",
+        "while 2 in my_list:\n",
+        "    my_list.remove(2)\n",
+        "print(my_list)   # Output: [1, 3, 4, 5]\n",
+        "\n",
+        "\n",
+        "# Solution 3:\n",
+        "print('\\nSolution 3')\n",
+        "my_list = [1, 2, 3, 4, 5]\n",
+        "del my_list[0]   # Remove the first element\n",
+        "print(my_list)   # Output: [2, 3, 4, 5]\n",
+        "\n",
+        "\n",
+        "# Solution 4:\n",
+        "print('\\nSolution 4')\n",
+        "my_list = [1, 2, 3, 4, 5]\n",
+        "popped_element = my_list.pop(2)   # Pop the element at index 2\n",
+        "print(popped_element)   # Output: 3\n",
+        "print(my_list)   # Output: [1, 2, 4, 5]\n",
+        "\n",
+        "# Solution 5:\n",
+        "print('\\nSolution 5')\n",
+        "my_list = [1, 2, 3, 4, 5]\n",
+        "new_list = [x for x in my_list if x != 3]   # Remove all elements equal to 3\n",
+        "print(new_list)   # Output: [1, 2, 4, 5]\n",
+        "\n",
+        "# Solution 6:\n",
+        "print('\\nSolution 6')\n",
+        "my_list.clear() #empty the list\n",
+        "print(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YnvAW0BVkMpN",
+        "outputId": "ca8b8349-fd82-4812-e29b-949e3a20b27d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Solution 1\n",
+            "[1, 2, 4, 5]\n",
+            "\n",
+            "Solution 2\n",
+            "[1, 3, 4, 5]\n",
+            "\n",
+            "Solution 3\n",
+            "[2, 3, 4, 5]\n",
+            "\n",
+            "Solution 4\n",
+            "3\n",
+            "[1, 2, 4, 5]\n",
+            "\n",
+            "Solution 5\n",
+            "[1, 2, 4, 5]\n",
+            "\n",
+            "Solution 6\n",
+            "[]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "is1saYKrN6tc"
+      },
+      "source": [
+        "# <font color='green'>**Accessing Elements in a List**</font>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "FsZQgEVzN6tc",
+        "outputId": "b462ffbf-9874-4547-9f64-92e17c93930a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "example\n",
+            "3.132\n",
+            "10\n",
+            "30\n",
+            "[1, 2, 3, 'example', 3.132, 10, 30]\n",
+            "example\n",
+            "[1, 2]\n",
+            "[30, 10, 3.132, 'example', 3, 2, 1]\n",
+            "[1, 2, 3]\n",
+            "[30, 3.132]\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Quite similar to access strings in python. You pass the index values and hence can obtain the values as needed.\n",
+        "\n",
+        "my_list = [1, 2, 3, 'example', 3.132, 10, 30]\n",
+        "for element in my_list: #access elements one by one\n",
+        "    print(element)\n",
+        "print(my_list) #access all elements\n",
+        "\n",
+        "print(my_list[3]) #access index 3 element\n",
+        "\n",
+        "print(my_list[0:2]) #access elements from 0 to 1 and exclude 2\n",
+        "\n",
+        "print(my_list[::-1]) #access elements in reverse\n",
+        "# [ <first element to include> : <first element to exclude> : <step> ]\n",
+        "print(my_list[0:3:1])\n",
+        "print(my_list[-1:-5:-2])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list[::-1]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wwhbLHXrNbzJ",
+        "outputId": "d648c949-fb2d-4fff-dc5b-6f65d44ffdb7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[30, 10, 3.132, 'example', 3, 2, 1]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Jmqb1XuyOA8G",
+        "outputId": "9ccbb1af-d5af-4647-c919-cc163724ef5b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[30, 10, 3.132, 'example', 3, 2, 1]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "PZ-D_S2XN6tc",
+        "outputId": "b30377ec-b93b-4f06-b3c9-fb066a28ec83",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Hello', ' we are learning python', ' dfjahsdfa']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ],
+      "source": [
+        "# converting string to a list of words\n",
+        "text = \"Hello, we are learning python, dfjahsdfa\"\n",
+        "lst = text.split(',')\n",
+        "lst"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "keywords = \"science, IoT, DS, ML\"\n",
+        "keywords_lst = keywords.split(',')\n",
+        "keywords_lst"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gCBxt5VnMt4V",
+        "outputId": "70375c02-60e9-4d77-c5f5-bd886b843563"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['science', ' IoT', ' DS', ' ML']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 24
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "keywords_str = \", \".join(keywords_lst)\n",
+        "keywords_str"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "4aenxVjkNQF4",
+        "outputId": "3475312b-3b83-4072-bdbf-a71a08228742"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'science,  IoT,  DS,  ML'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 26
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "U-wjCnHfNP-s"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_v2nqqujN6tc"
+      },
+      "source": [
+        "## <font color='purple'>Exploring More on List</font>\n",
+        "\n",
+        "* len()\n",
+        "* print()\n",
+        "* reverse()\n",
+        "* count()\n",
+        "* sorted()\n",
+        "* sort()\n",
+        "* slicing\n",
+        "* negative indexing\n",
+        "* list slicing\n",
+        "* list comprehension"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grocery_list = ['milk', 'cake', 'cake', 'milk', 'chips', [1, 2, 2]]"
+      ],
+      "metadata": {
+        "id": "Myk8456fN4RG"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sorted(grocery_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hCOHx6yLNy_9",
+        "outputId": "7df1d3da-ad03-4cca-ae04-8e4b130dc674"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['cake', 'cake', 'chips', 'milk', 'milk']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "Fp3mAPznOwCY"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jwQvkIJfXXPJ"
+      },
+      "source": [
+        "# **List Length**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yENbq8t1Xkt2",
+        "outputId": "b671f01e-d962-4a83-be05-b58c389345d4"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "4"
+            ]
+          },
+          "execution_count": 33,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "total_items = len(cart)\n",
+        "total_items"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dgcxW-qMbaqH"
+      },
+      "source": [
+        "# **List Printing**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pnOq8lYYbk3t",
+        "outputId": "65af3394-9864-44a4-95dc-2e647e01ec9a"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "shirt\n",
+            "trouser\n",
+            "tracksuit\n",
+            "watch\n"
+          ]
+        }
+      ],
+      "source": [
+        "for item in cart:\n",
+        "  print(item)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YgRN-R9ibvwd"
+      },
+      "source": [
+        "# **List as a Heterogenous Data Structure**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kDfvxSbVbu1Z",
+        "outputId": "532f3aa4-d857-4353-d4dd-842d47ae7a25"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Saksham who is 17 scored 85.4 percent in eleven\n"
+          ]
+        }
+      ],
+      "source": [
+        "person = [\"Saksham\", 17, 85.4, \"eleven\"] # name, age, percentage, class\n",
+        "print(person[0], \"who is\", person[1], \"scored\", person[2], \"percent in\", person[3] )"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "OBFLiMuIeAcx"
+      },
+      "source": [
+        "# **List of List**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EfP8pHbEbtyg",
+        "outputId": "02e5fc67-ad72-437d-b005-11c21401e2b9"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[[12, 139], [14, 102], [11, 33]]"
+            ]
+          },
+          "execution_count": 38,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "matrix = [[12, 139],\n",
+        "          [14, 102],\n",
+        "          [11, 33]]\n",
+        "matrix"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "m = [[12, 139], [14, 102], [11, 33]]\n",
+        "m[1][0]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oZOYH5OcOeH6",
+        "outputId": "442caa3f-0774-42a0-f743-f29b32afb073"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "14"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 30
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 163
+        },
+        "id": "PHPpN2FzeajH",
+        "outputId": "a05bcdbe-59a8-4cdc-8f2b-59e75b367130"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[11, 33]"
+            ]
+          },
+          "execution_count": 39,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "matrix[2]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 163
+        },
+        "id": "kxvrc8lXeeF2",
+        "outputId": "fa640a36-e74e-4456-e23d-1a4c20715a4c"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "139"
+            ]
+          },
+          "execution_count": 41,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "matrix[0][1]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wBPZhri0eaP_"
+      },
+      "source": [
+        "# **List Reverse**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "px5EMsjEgZDf",
+        "outputId": "9add3537-b46f-4dbd-89b8-ae698ec0cf95"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "['shirt', 'trouser', 'tracksuit', 'watch']\n"
+          ]
+        },
+        {
+          "data": {
+            "text/plain": [
+              "['watch', 'tracksuit', 'trouser', 'shirt']"
+            ]
+          },
+          "execution_count": 42,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "print(cart)\n",
+        "cart.reverse()\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "urG24u2teX80"
+      },
+      "source": [
+        "# **List Sort**\n",
+        "The easiest way to sort a List is with the sorted(list) function.\n",
+        "\n",
+        "That takes a list and returns a new list with those elements in sorted order.\n",
+        "\n",
+        "The original list is not changed.\n",
+        "\n",
+        "The sorted() optional argument reverse=True, e.g. sorted(list, [reverse]),\n",
+        "makes it sort backwards."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRPNmpVmhOor",
+        "outputId": "b07b54d1-83ca-4a31-d2b8-59424c6940ee"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[1, 4, 5, 12, 13, 28, 32]"
+            ]
+          },
+          "execution_count": 43,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "roll_numbers = [12, 1, 32, 13, 5, 4, 28]\n",
+        "roll_numbers_sorted = sorted(roll_numbers) # we got output in a new list\n",
+        "roll_numbers_sorted"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LijlGSd3hvD1",
+        "outputId": "6cb6811a-813d-4b9f-9b17-6fdb1ed88ba3"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[12, 1, 32, 13, 5, 4, 28]"
+            ]
+          },
+          "execution_count": 44,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "roll_numbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wYM9im-xilus",
+        "outputId": "d8c8d626-fb17-4685-8070-d624aa8c5011"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[32, 28, 13, 12, 5, 4, 1]"
+            ]
+          },
+          "execution_count": 45,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "roll_numbers_sort_rev = sorted(roll_numbers, reverse = True)\n",
+        "roll_numbers_sort_rev"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Q5KAKgHBhyLq",
+        "outputId": "2be09499-ef3b-448a-f636-f2f2fe46d226"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[1, 4, 5, 12, 13, 28, 32]"
+            ]
+          },
+          "execution_count": 46,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "roll_numbers.sort()\n",
+        "roll_numbers"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7MeYUXyEjnaZ"
+      },
+      "source": [
+        "# **Keywords for List**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7BuREwHGjmeq",
+        "outputId": "7a7f3595-1b92-4e8a-96ab-e1a60e490e00"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Already Added\n"
+          ]
+        },
+        {
+          "data": {
+            "text/plain": [
+              "['watch', 'tracksuit', 'trouser', 'shirt']"
+            ]
+          },
+          "execution_count": 47,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "#keyword 'in' is used to test if an item is in a list\n",
+        "if 'trouser' in cart:\n",
+        "  print('Already Added')\n",
+        "\n",
+        "#keyword 'not' can combined with 'in'\n",
+        "if 'watch' not in cart:\n",
+        "  cart.append('watch')\n",
+        "  print('Item Added')\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "D9lNGPO_k0nW"
+      },
+      "source": [
+        "# **List Having Multiple Reference**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lrAIe25mk0R0",
+        "outputId": "c403ef4b-fa89-42ab-fa51-a89d378d9efd"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original list:  [1, 2, 3, 4, 5, 6]\n"
+          ]
+        }
+      ],
+      "source": [
+        "lst1 = [1, 2, 3, 4, 5]\n",
+        "copy_lst1 = lst1\n",
+        "copy_lst1.append(6)\n",
+        "\n",
+        "#print original list\n",
+        "print(\"Original list: \", lst1)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "id(copy_lst1), id(lst1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y3iUd17WQKkn",
+        "outputId": "824744b2-002e-4cd2-a7a2-67ae7beadbf1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(140351539804864, 140351539804864)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fT_rEoSil8G5"
+      },
+      "source": [
+        "# **List Slicing**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PstFAm4gl7cS",
+        "outputId": "288072f5-731f-475c-8fbf-717c36493ee7"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[1.25, 3.26, 5]"
+            ]
+          },
+          "execution_count": 49,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "\"\"\"\n",
+        "slice syntax [start:end:step]\n",
+        "Default\n",
+        "start = 0\n",
+        "end = length\n",
+        "step = 1\n",
+        "\"\"\"\n",
+        "lst = [1.25, 3.26, 5, 2.3, 1, 7]\n",
+        "lst[:3]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o-rMcRXZjhbx",
+        "outputId": "376e9787-9cc0-4148-a984-6a90e479cc71"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[2.3, 1, 7]"
+            ]
+          },
+          "execution_count": 50,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "lst[3:]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-oeeHn4Fmzf8",
+        "outputId": "78560461-85d5-412f-fc9f-c8cdf6c7e535"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[5, 2.3, 1]"
+            ]
+          },
+          "execution_count": 51,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "lst[2:5]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DlVe9Lu2nCnN",
+        "outputId": "af42ebee-7a8f-4b2c-f3ab-4b0ab9f288d5"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[1.25, 5, 1]"
+            ]
+          },
+          "execution_count": 52,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "lst[::2] # slicing with stepsize = 2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UzsQ6wERnaa5",
+        "outputId": "32a27b02-977b-4ca1-f19b-3d6a43acc623"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[7, 1, 2.3, 5, 3.26, 1.25]"
+            ]
+          },
+          "execution_count": 53,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "lst[::-1] # reverse the List"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JXW0iok7nh7U"
+      },
+      "source": [
+        "# **Negative Indexing**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ly1-I1TQnfqi",
+        "outputId": "ad38e32b-5496-438b-b42d-34c1bb396da8"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "[1.25, 3.26, 5, 2.3, 1, 7]\n"
+          ]
+        },
+        {
+          "data": {
+            "text/plain": [
+              "7"
+            ]
+          },
+          "execution_count": 54,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "print(lst)\n",
+        "lst[-1] # Prints last elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2LOm5amPoR5k",
+        "outputId": "d6d9b114-2ddb-43ae-b243-11954d2424ba"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "execution_count": 55,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "lst[-2]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7BD7Cg76otWD"
+      },
+      "source": [
+        "# **String Split to create**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "p6TDd43ZpSGy",
+        "outputId": "07f549d5-27c4-405b-8721-b4ec1bcbcd1b"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "['Hello,', 'we', 'are', 'learning', 'python']"
+            ]
+          },
+          "execution_count": 56,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "text = \"Hello, we are learning python\"\n",
+        "lst = text.split()\n",
+        "lst"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NfT2HvJIpnMH",
+        "outputId": "1113f798-0cf7-4709-d752-f24d34177fce"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "['Hello', ' we are learning python']"
+            ]
+          },
+          "execution_count": 57,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "lst = text.split(',')\n",
+        "lst"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6S-qIAjeqL9C"
+      },
+      "source": [
+        "# **List Comprehension**\n",
+        "List comprehensions provide a concise way to create lists."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g8WJz2lPp6L9",
+        "outputId": "04064d8b-ad25-4018-d3fa-eaf89266c9f8"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]"
+            ]
+          },
+          "execution_count": 58,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "lst = []\n",
+        "for num in range(1, 25, 2):\n",
+        "  lst.append(num)\n",
+        "lst"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rkZ0gsZfq10b",
+        "outputId": "ca0b151c-324b-43d3-b1b8-7018e832d697"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]"
+            ]
+          },
+          "execution_count": 59,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "lst = [num for num in range(1, 25,2)]\n",
+        "lst"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5Qn2jU_pL9gL"
+      },
+      "source": [
+        "When programming, frequently we want to transform one type of data into another. As a simple example, consider the following code that computes square numbers:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "id": "IVNEwoMXL9gL",
+        "outputId": "d571445b-055d-45f0-f800-24fd76ceec5a"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "[0, 1, 4, 9, 16]\n"
+          ]
+        }
+      ],
+      "source": [
+        "nums = [0, 1, 2, 3, 4]\n",
+        "squares = []\n",
+        "for x in nums:\n",
+        "    squares.append(x ** 2)\n",
+        "print(squares)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7DmKVUFaL9gQ"
+      },
+      "source": [
+        "You can make this code simpler using a list comprehension:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "id": "kZxsUfV6L9gR",
+        "outputId": "4254a7d4-58ba-4f70-a963-20c46b485b72"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "[0, 1, 4, 9, 16]\n"
+          ]
+        }
+      ],
+      "source": [
+        "nums = [0, 1, 2, 3, 4]\n",
+        "squares = [x ** 2 for x in nums]\n",
+        "print(squares)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-D8ARK7tL9gV"
+      },
+      "source": [
+        "List comprehensions can also contain conditions:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "id": "yUtgOyyYL9gV",
+        "outputId": "1ae7ab58-8119-44dc-8e57-fda09197d026"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "[0, 4, 16]\n"
+          ]
+        }
+      ],
+      "source": [
+        "nums = [0, 1, 2, 3, 4]\n",
+        "even_squares = [x ** 2 for x in nums if x % 2 == 0]\n",
+        "print(even_squares)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "tiEbP5TJnj69"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Programmers' Paradise\n",
+        "\n",
+        "    Question 1. Write a Python program to create a new list containing only the even elements of an existing list using list comprehension.\n",
+        "\n",
+        "    Question 2. Write a Python program to create a new list containing only the elements that are multiples of 3 from an existing list using list comprehension.\n",
+        "    \n",
+        "    Question 3. Write a Python program to extract the last three elements of a list using negative indexing.\n",
+        "    \n",
+        "    Question 4. Write a Python program to extract the first three elements of a list using list slicing.\n",
+        "    \n",
+        "    Question 5. Write a Python program to extract every third element of a list using list slicing.\n",
+        "    \n",
+        "    Question 6. Write a Python program to reverse the order of elements in a list using a loop and slicing.\n",
+        "    \n",
+        "    Question 7. Write a Python program to reverse the order of elements in a list using the reversed() function."
+      ],
+      "metadata": {
+        "id": "597LB1TuoYGl"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solutions :\n",
+        "\n",
+        "# Solution 1:\n",
+        "\n",
+        "print('\\nSolution 1')\n",
+        "lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "new_lst = [x for x in lst if x % 2 == 0]\n",
+        "print(new_lst)\n",
+        "\n",
+        "# Solution 2:\n",
+        "\n",
+        "print('\\nSolution 2')\n",
+        "lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "new_lst = [x for x in lst if x % 3 == 0]\n",
+        "print(new_lst)\n",
+        "\n",
+        "# Solution 3:\n",
+        "\n",
+        "print('\\nSolution 3')\n",
+        "lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "new_lst = lst[-3:]\n",
+        "print(new_lst)\n",
+        "\n",
+        "# Solution 4:\n",
+        "\n",
+        "print('\\nSolution 4')\n",
+        "lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "new_lst = lst[:3]\n",
+        "print(new_lst)\n",
+        "\n",
+        "# Solution 5:\n",
+        "\n",
+        "print('\\nSolution 5')\n",
+        "lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "new_lst = lst[::3]\n",
+        "print(new_lst)\n",
+        "\n",
+        "\n",
+        "# Solution 6:\n",
+        "\n",
+        "print('\\nSolution 6')\n",
+        "lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "new_lst = []\n",
+        "for i in range(len(lst) - 1, -1, -1):\n",
+        "    new_lst.append(lst[i])\n",
+        "print(new_lst)\n",
+        "\n",
+        "# Solution 7:\n",
+        "\n",
+        "print('\\nSolution 7')\n",
+        "lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "new_lst = []\n",
+        "for i in range(len(lst) - 1, -1, -1):\n",
+        "    new_lst.append(lst[i])\n",
+        "print(new_lst)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "T36-5484oYKv",
+        "outputId": "c2a14970-b81f-4cb8-9aaa-3c107e097be1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Solution 1\n",
+            "[2, 4, 6, 8, 10]\n",
+            "\n",
+            "Solution 2\n",
+            "[3, 6, 9]\n",
+            "\n",
+            "Solution 3\n",
+            "[8, 9, 10]\n",
+            "\n",
+            "Solution 4\n",
+            "[1, 2, 3]\n",
+            "\n",
+            "Solution 5\n",
+            "[1, 4, 7, 10]\n",
+            "\n",
+            "Solution 6\n",
+            "[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]\n",
+            "\n",
+            "Solution 7\n",
+            "[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IwJB7rdXuSKF"
+      },
+      "source": [
+        "# **Tuples**\n",
+        "A tuple is similar to list\n",
+        "\n",
+        "The diffence between the two is that we can't change the elements of tuple once it is assigned whereas in the list, elements can be changed\n",
+        "\n",
+        "# Use cases\n",
+        "* Iterating Over Fixed Groups of Items: Tuples are often used in loops or iterations where each item is a fixed group.\n",
+        "\n",
+        "```\n",
+        "records = [\n",
+        "    (\"Alice\", 30, \"Engineer\"),\n",
+        "    (\"Bob\", 25, \"Designer\"),\n",
+        "    (\"Charlie\", 35, \"Manager\"),\n",
+        "]\n",
+        "```\n",
+        "\n",
+        "* Memory Efficiency: Tuples consume less memory compared to lists, making them efficient for large datasets that don't require modification.\n",
+        "* Storing Fixed-Size Data: Tuples are ideal for data that always has a specific structure and size, such as dates or database rows.\n",
+        "\n",
+        "```\n",
+        "date = (2025, 1, 19)  # (year, month, day)\n",
+        "```\n",
+        "\n",
+        "# **Tuple Declaration and Initialization**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# x = (1, 2)\n",
+        "# type(x)\n",
+        "\n",
+        "x = 1, 2\n",
+        "type(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1oCfe8uRPTdo",
+        "outputId": "6bdb5143-d705-4644-cc0b-a444bfd4482b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tuple"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 33
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = ['rice']\n",
+        "type(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xqbefCUDPnSP",
+        "outputId": "9bd2ac78-902d-4b74-ceff-9141c6264a83"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "list"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 34
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 1,\n",
+        "type(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MisAwK50PnPa",
+        "outputId": "dddb77a9-305f-4c35-ca32-ac28a881ab6a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tuple"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "n0BmJ5SQN6th",
+        "outputId": "ea44c7a9-ec3a-4cd1-b7d9-b871e15c3cde"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "(1, 2, 3)\n"
+          ]
+        },
+        {
+          "data": {
+            "text/plain": [
+              "tuple"
+            ]
+          },
+          "execution_count": 61,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "my_tuple = (1, 2, 3) #create tuple\n",
+        "print(my_tuple)\n",
+        "type(my_tuple)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "var = (3, )"
+      ],
+      "metadata": {
+        "id": "F5QaIam8TjsM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(var)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2M-WP1WXTo0f",
+        "outputId": "b25f63e2-c199-47cf-ee71-c0f44d1deaf1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tuple"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1HMAjyuo2Y8D",
+        "outputId": "3906cb38-654c-4c9a-b556-b6ee5edeaaef"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "(1, 'raju', 28, 'abc')\n",
+            "('File', ('New', 'Save', 'Save As'), ['Insert', 'Clip Art', 'Table'])\n"
+          ]
+        }
+      ],
+      "source": [
+        "#empty tuple\n",
+        "task_bar = ()\n",
+        "\n",
+        "#tuple with mixed datatypes\n",
+        "t = (1, 'raju', 28, 'abc')\n",
+        "print(t)\n",
+        "\n",
+        "#nested tuple\n",
+        "task_bar = ('File', ('New', 'Save', 'Save As'), ['Insert','Clip Art', 'Table'])\n",
+        "print(task_bar)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J6UJZPK52e7M",
+        "outputId": "75e30966-a6b4-4d6b-c195-b5d2e5a65882"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "type at first  <class 'str'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "#only parenthesis is not enough\n",
+        "task_bar = ('File')\n",
+        "print(\"type at first \", type(task_bar))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o9OIco8e2iTX",
+        "outputId": "44de5872-496d-4488-fc31-d56137ca3fd7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "type after putting comma  <class 'tuple'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "#need a comma at the end\n",
+        "task_bar = ('File',)\n",
+        "print(\"type after putting comma \", type(task_bar))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bMbp5nhw2tG4",
+        "outputId": "141a7442-ce28-4ea7-f20b-c23722250966"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "type without parenthesis  <class 'tuple'>\n",
+            "('File',)\n"
+          ]
+        }
+      ],
+      "source": [
+        "#parenthesis is optional\n",
+        "task_bar = 'File',\n",
+        "print(\"type without parenthesis \", type(task_bar))\n",
+        "print(task_bar)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Bi1Mgkw221o7"
+      },
+      "source": [
+        "# **Accessing Elements in Tuple**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "McBJvxnW24F6",
+        "outputId": "b1ba27d9-12f4-4941-ce96-bc5375dff9a8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insert\n"
+          ]
+        }
+      ],
+      "source": [
+        "task_bar = ('File', 'Insert', 'Edit', 'View')\n",
+        "print(task_bar[1])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HXYanBwz2-Zy",
+        "outputId": "d401c095-d97a-439f-9d8c-31c47dc39148"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "View\n"
+          ]
+        }
+      ],
+      "source": [
+        "#negative index\n",
+        "print(task_bar[-1]) #print last element in a tuple brahma"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qnZoSgD4GB7i",
+        "outputId": "272607d4-06d3-4e10-9330-ee03fbda4156"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('Insert', 'Edit')"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ],
+      "source": [
+        "#slicing\n",
+        "task_bar[1:3]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "veYa2ZAg3K81"
+      },
+      "source": [
+        "# **Changing a Tuple**\n",
+        "unlike lists, tuples are immutable\n",
+        "\n",
+        "This means that elements of a tuple cannot be changed once it has been assigned. But, if the element is itself a mutable datatype like list, its nested items can be changed.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 193
+        },
+        "id": "4u4ebMHG3KVG",
+        "outputId": "5da5575d-6c08-4ae9-c5dd-acc6cf2faf73"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "'tuple' object does not support item assignment",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-38-0db75f561a37>\u001b[0m in \u001b[0;36m<cell line: 2>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mtask_bar\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0;34m'File'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'Insert'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'Edit'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'View'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mtask_bar\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'Help'\u001b[0m \u001b[0;31m#will get TypeError\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m: 'tuple' object does not support item assignment"
+          ]
+        }
+      ],
+      "source": [
+        "task_bar = ('File', 'Insert', 'Edit', 'View')\n",
+        "task_bar[2] = 'Help' #will get TypeError"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 197
+        },
+        "id": "xh9w7Lco3VpL",
+        "outputId": "363ef5f3-1072-439a-bf10-14725479d6d8"
+      },
+      "outputs": [
+        {
+          "ename": "TypeError",
+          "evalue": "ignored",
+          "output_type": "error",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-29-ac8407523a33>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mt\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0;34m'File'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0;34m'New'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'Save'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'Save As'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mt\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'Print'\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mt\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: 'tuple' object does not support item assignment"
+          ]
+        }
+      ],
+      "source": [
+        "t = ('File', ('New', 'Save', 'Save As'))\n",
+        "t[1][2] = 'Print'\n",
+        "print(t)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "[1, 2, 3] + [4, 5]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qrUqJc8lUkXj",
+        "outputId": "963b4b1c-266b-4885-9f18-ff37c31eda0c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 4, 5]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xIvsOgIL3b1c",
+        "outputId": "fe2fb9f9-22c4-47ca-e759-88996b569474"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "('File', 'Save', 'New')\n"
+          ]
+        }
+      ],
+      "source": [
+        "#concatenating tuples\n",
+        "t = ('File','Save') + ('New',)\n",
+        "print(t)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "[1, 2, 3]  * 4"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CuXws5sdU0v9",
+        "outputId": "bae78f0c-c9c4-4cfe-da61-e77219cb8b21"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tcE7sw0G3h0C",
+        "outputId": "f4d65c78-530d-407a-e9b4-55b54a14c872"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "('File', 'File', 'File', 'File')\n"
+          ]
+        }
+      ],
+      "source": [
+        "#repeat the elements in a tuple for a given number of times using the * operator.\n",
+        "t = (('File',)  * 4)\n",
+        "print(t)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bTo58SttN6ti"
+      },
+      "source": [
+        "# <font color='green'>**Indexing in a Tuple**</font>\n",
+        "\n",
+        "* The index() method returns the index of the specified element in the tuple.\n",
+        "           \n",
+        "           tuple.index(element, start, end)\n",
+        "     \n",
+        "    The tuple index() method can take a maximum of three arguments:\n",
+        "\n",
+        "    ** element - the element to be searched\n",
+        "    \n",
+        "    ** start (optional) - start searching from this index\n",
+        "    \n",
+        "    ** end (optional) - search the element up to this index\n",
+        "   \n",
+        "   RETURNS:\n",
+        "   \n",
+        "    ** The index() method returns the index of the given element in the tuple.\n",
+        "    ** If the element is not found, a ValueError exception is raised.\n",
+        "\n",
+        "<font color='red'>**Note:**</font> The index() method only returns the first occurrence of the matching element.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1PsZeAvJ3oJN",
+        "outputId": "7112ed41-8567-498a-864e-4aca0611a89a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n"
+          ]
+        }
+      ],
+      "source": [
+        "t = (1, 2, 1, 2, 6, 3, 1, 3, 3, 4, 1)\n",
+        "print(t.index(1)) # return index of the first occurence of the element"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grocery_list.index('cake')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 141
+        },
+        "id": "X0EZ2SpURl-u",
+        "outputId": "f0772957-24d6-4fa3-a4f3-d0b94ca664c8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "name 'grocery_list' is not defined",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-16-f854aea6bbaf>\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mgrocery_list\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mindex\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'cake'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m: name 'grocery_list' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "h2ScroTdN6tj",
+        "outputId": "3eb2dc5d-42c5-4e90-c9a5-0619586fc7ae",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(t.index(3))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "AoZ2Q1vuN6tj"
+      },
+      "source": [
+        "## <font color='green'>**Other Operations On Tuple**</font>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "tbQbZuexN6tj",
+        "outputId": "abd9fb34-4f8b-4a41-d365-59557406c4e8"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "('File', 'book', 'File', 'book', 'File', 'book', 'File', 'book')\n"
+          ]
+        }
+      ],
+      "source": [
+        "#repeat the elements in a tuple for a given number of times using the * operator.\n",
+        "t = (('File','book')  * 4)\n",
+        "print(t)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "KdlWDChLN6tj",
+        "outputId": "c52ebe5e-9b91-426c-e58a-f95aa92ea541"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "('File', 'Save', 'New', 'old')\n"
+          ]
+        }
+      ],
+      "source": [
+        "#concatinating tuples\n",
+        "t = ('File','Save') + ('New','old')\n",
+        "print(t)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "HonjJFIxmmUy"
+      },
+      "source": [
+        "# **Tuple Functions**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5U3yoglym1Qm",
+        "outputId": "23c96717-6246-419a-8018-d5eddf785386"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Length of Tuple:  13\n",
+            "6 occurs, 3 times\n",
+            "True\n",
+            "False\n",
+            "Sorted Tuple (1, 2, 3, 4, 4, 5, 5, 6, 6, 6, 7, 8, 15)\n",
+            "Maximum element is: 15\n",
+            "Minimum element is: 1\n",
+            "Total is: 72\n"
+          ]
+        }
+      ],
+      "source": [
+        "tup = (1, 8, 4, 4, 5, 6, 15, 6, 6, 7, 2, 3, 5)\n",
+        "\n",
+        "# Find the Length of the tuple\n",
+        "print(\"Length of Tuple: \", len(tup))\n",
+        "\n",
+        "# count the frequency of a particular element\n",
+        "print(\"6 occurs,\", tup.count(6), \"times\")\n",
+        "\n",
+        "# Membership function - in\n",
+        "print(1 in tup) # returns True\n",
+        "print(9 in tup) # returns False\n",
+        "\n",
+        "# sorting the tuple\n",
+        "print(\"Sorted Tuple\", tuple(sorted(tup))) # sorted returns the list\n",
+        "\n",
+        "# maximum element and minimium element\n",
+        "print(\"Maximum element is:\", max(tup))\n",
+        "print(\"Minimum element is:\", min(tup))\n",
+        "\n",
+        "# Finding the total of elements\n",
+        "print(\"Total is:\", sum(tup))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup = (1, 2)"
+      ],
+      "metadata": {
+        "id": "OIMfIOqjZIQi"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup1 = tup * 4"
+      ],
+      "metadata": {
+        "id": "6OMMjtutZLgo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "id(tup)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y9LVdYQvZOcU",
+        "outputId": "1530b026-0505-474f-b4f8-f669d00aa166"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "138954516663232"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 51
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "id(tup1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bUITiX1lZRBB",
+        "outputId": "fb4d62e2-260c-47e7-c228-624e9b430122"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "138954512664496"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 52
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "saLjtn9cZQ4R"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup = (1, 2, [1, 2, 3])"
+      ],
+      "metadata": {
+        "id": "TOU799Q7YQL3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup[2].append(3)"
+      ],
+      "metadata": {
+        "id": "RJtxGbyjYTU4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 1000\n",
+        "y = 1000\n",
+        "\n",
+        "print(id(x), id(y))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ca8xzmn9Ya_H",
+        "outputId": "f6984b20-c48a-4c41-f842-a957fe76b62a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "138954512199984 138954512203440\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## ***Tuple Adventure***\n",
+        "\n",
+        "    1. Write a Python program to create an empty tuple.\n",
+        "\n",
+        "    2. Write a Python program to create a tuple with one item.\n",
+        "\n",
+        "    3. Write a Python program to create a tuple with multiple items.\n",
+        "\n",
+        "    4. Write a Python program to access a tuple using indexing.\n",
+        "\n",
+        "    5. Write a Python program to access a tuple using negative indexing.\n",
+        "\n",
+        "    6. Write a Python program to slice a tuple.\n",
+        "\n",
+        "    7. Write a Python program to find the length of a tuple.\n",
+        "    \n",
+        "    8. Write a Python program to join two tuples.\n",
+        "    \n",
+        "    9. Write a Python program to convert a tuple to a list.\n",
+        "    \n",
+        "    10. Write a Python program to convert a list to a tuple."
+      ],
+      "metadata": {
+        "id": "cB7Wsa_5qhUB"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Solutions :"
+      ],
+      "metadata": {
+        "id": "8Jjm-s5PtBWm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('\\nSolution 1')\n",
+        "\n",
+        "my_tuple = ()\n",
+        "print(my_tuple)\n",
+        "\n",
+        "print('\\nSolution 2')\n",
+        "\n",
+        "my_tuple = (\"apple\",)\n",
+        "print(my_tuple)\n",
+        "\n",
+        "print('\\nSolution 3')\n",
+        "\n",
+        "my_tuple = (\"apple\", \"banana\", \"cherry\")\n",
+        "print(my_tuple)\n",
+        "\n",
+        "print('\\nSolution 4')\n",
+        "\n",
+        "my_tuple = (\"apple\", \"banana\", \"cherry\")\n",
+        "print(my_tuple[1])\n",
+        "\n",
+        "\n",
+        "print('\\nSolution 5')\n",
+        "\n",
+        "my_tuple = (\"apple\", \"banana\", \"cherry\")\n",
+        "print(my_tuple[-1])\n",
+        "\n",
+        "print('\\nSolution 6')\n",
+        "\n",
+        "my_tuple = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\", \"melon\")\n",
+        "print(my_tuple[2:5])\n",
+        "\n",
+        "print('\\nSolution 7')\n",
+        "\n",
+        "my_tuple = (\"apple\", \"banana\", \"cherry\")\n",
+        "print(len(my_tuple))\n",
+        "\n",
+        "print('\\nSolution 8')\n",
+        "\n",
+        "tuple1 = (\"apple\", \"banana\", \"cherry\")\n",
+        "tuple2 = (\"orange\", \"kiwi\", \"melon\")\n",
+        "tuple3 = tuple1 + tuple2\n",
+        "print(tuple3)\n",
+        "\n",
+        "print('\\nSolution 9')\n",
+        "\n",
+        "my_tuple = (\"apple\", \"banana\", \"cherry\")\n",
+        "my_list = list(my_tuple)\n",
+        "print(my_list)\n",
+        "\n",
+        "print('\\nSolution 10')\n",
+        "\n",
+        "my_list = [\"apple\", \"banana\", \"cherry\"]\n",
+        "my_tuple = tuple(my_list)\n",
+        "print(my_tuple)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AtuWhf0ltMC_",
+        "outputId": "f5e9ef45-06f5-4b6a-c0bd-e3381b2d4f06"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Solution 1\n",
+            "()\n",
+            "\n",
+            "Solution 2\n",
+            "('apple',)\n",
+            "\n",
+            "Solution 3\n",
+            "('apple', 'banana', 'cherry')\n",
+            "\n",
+            "Solution 4\n",
+            "banana\n",
+            "\n",
+            "Solution 5\n",
+            "cherry\n",
+            "\n",
+            "Solution 6\n",
+            "('cherry', 'orange', 'kiwi')\n",
+            "\n",
+            "Solution 7\n",
+            "3\n",
+            "\n",
+            "Solution 8\n",
+            "('apple', 'banana', 'cherry', 'orange', 'kiwi', 'melon')\n",
+            "\n",
+            "Solution 9\n",
+            "['apple', 'banana', 'cherry']\n",
+            "\n",
+            "Solution 10\n",
+            "('apple', 'banana', 'cherry')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "j4V_QpSJN6tj"
+      },
+      "source": [
+        "# <font color='green'>**SETS**</font>\n",
+        "\n",
+        "* Sets are a collection of unordered elements that are unique. Meaning that even if the data is repeated more than one time, it would be entered into the set only once. It resembles the sets that you have learnt in arithmetic. The operations also are the same as is with the arithmetic sets.\n",
+        "\n",
+        "* The set itself is mutable. We can add or remove items from it.\n",
+        "\n",
+        "* Sets can be used to perform mathematical set operations like\n",
+        "\n",
+        "union: the set of elements combining both the sets\n",
+        "\n",
+        "intersection: the set of elements that are present in both sets.\n",
+        "\n",
+        "symmetric difference: the set of elements that are in either set, but not in both\n",
+        "\n",
+        " etc."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RiohgUvGN6tj"
+      },
+      "source": [
+        "# <font color='green'>**Creating a set**</font>\n",
+        "\n",
+        "Sets are created using the curly braces but instead of adding key-value pairs, you just pass values to it.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "CUqnl9RLN6tj",
+        "outputId": "69b7162c-3aaf-427b-ca9e-f953eec5888b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "{1, 2, 3, 4, 5}\n"
+          ]
+        }
+      ],
+      "source": [
+        "my_set = {1, 2, 3, 4, 5, 5, 5} #create set\n",
+        "print(my_set)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type({2, 2, 3 ,3})"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XmX_phpka2x9",
+        "outputId": "adec31ed-e6fd-4f81-82af-0274b8ffbb8e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "set"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 62
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grocery_list_unique = set(grocery_list)"
+      ],
+      "metadata": {
+        "id": "sZgFFPsPSKm3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "uCPPNgcqN6tk",
+        "outputId": "b34aedaa-63a9-4f82-bbfc-eb40ae37c11f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "set"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 64
+        }
+      ],
+      "source": [
+        "new_set = set((1, 2, 3, 3))\n",
+        "type(new_set)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "wJyemm_LN6tk",
+        "outputId": "b7d51da4-3e5a-428c-d6fd-557aaa3e87a1"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "<class 'dict'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "empty_braces = {}\n",
+        "print(type(empty_braces))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gHipvm3Gt6b0",
+        "outputId": "b8fabd2f-9ddb-4144-8c08-e042924d2606"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1, 2, 3, 4, 5, 6}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 46
+        }
+      ],
+      "source": [
+        "roll_numbers = {1, 5, 4, 2, 3, 5, 6, 2, 3}\n",
+        "roll_numbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3csPZSxnvDw5",
+        "outputId": "350c01e1-13e0-46a1-e7b7-7cfe92def0fc"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "6"
+            ]
+          },
+          "execution_count": 73,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "len(roll_numbers)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "PxTiCQeeviV_"
+      },
+      "source": [
+        "# **No Indexing in sets**\n",
+        "roll_numbers[0] not Allowed"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "thzM6-eiN6tk",
+        "outputId": "142399e7-e935-434c-bb06-6905f2666cfa"
+      },
+      "outputs": [
+        {
+          "ename": "TypeError",
+          "evalue": "'set' object is not subscriptable",
+          "output_type": "error",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "Cell \u001b[0;32mIn[75], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m roll_numbers[\u001b[39m0\u001b[39;49m]\n",
+            "\u001b[0;31mTypeError\u001b[0m: 'set' object is not subscriptable"
+          ]
+        }
+      ],
+      "source": [
+        "roll_numbers[0]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VZDOKzwqN6tk"
+      },
+      "source": [
+        "# <font color='green'>**Adding elements**</font>\n",
+        "\n",
+        "To add elements, you use the add() function and pass the value to it."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "PC0taIW9N6tk"
+      },
+      "source": [
+        "> EXAMPLE 1"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-jwBI-8cvQhk",
+        "outputId": "fc213634-9241-4530-f1b2-b81f236b3bb8"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1, 2, 3, 4, 5, 6, 8}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 47
+        }
+      ],
+      "source": [
+        "# Adding Single Element\n",
+        "roll_numbers.add(8)\n",
+        "roll_numbers"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "SuhgmiuAN6tl"
+      },
+      "source": [
+        "> EXAMPLE 2:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "nKENRJfeN6tl",
+        "outputId": "337e800c-755f-4d30-f4b6-416f20eb701b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "{1, 2, 3, 5}\n"
+          ]
+        }
+      ],
+      "source": [
+        "my_set = {1, 2, 3}\n",
+        "my_set.add(5) #add element to set\n",
+        "print(my_set)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RjhiloExN6tl"
+      },
+      "source": [
+        "### <font color='green'>**update() in Sets**</font>:\n",
+        "update method updates the set, adding items from other iterables."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-8f6o4YSN6tl"
+      },
+      "source": [
+        "> EXAMPLE 1"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jTds3loswc-t",
+        "outputId": "e3188831-794d-40c1-de7e-9be878dce939"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "{1, 2, 3, 4, 5, 6, 8, 10, 12, 13}"
+            ]
+          },
+          "execution_count": 77,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "# Adding Multiple Elements\n",
+        "roll_numbers.update([10, 12, 13 ])\n",
+        "roll_numbers"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5NP_OjFPN6tl"
+      },
+      "source": [
+        "> EXAMPLE 2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "9unFxjmAN6tl",
+        "outputId": "11de5d2b-1781-4f9c-90da-3f16c8934c92"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "{1, 2, 3, 5, 10, 12, 13}"
+            ]
+          },
+          "execution_count": 81,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "# Adding Multiple Elements\n",
+        "my_set.update((10, 12, 13)) # update takes any iterable as input it could be list, dict, tuple\n",
+        "my_set"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "bG4pPTyjN6tl",
+        "outputId": "ff854b17-603d-4299-af8d-cb346b412362"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "numbers_set = {1, 2, 'a', 'c', 'b'}\n",
+            "numbers_set = {'lock', 'a', 'c', 'b', 'key'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "string_alphabet = 'abc'\n",
+        "numbers_set = {1, 2}\n",
+        "\n",
+        "# add elements of the string to the set\n",
+        "numbers_set.update(string_alphabet)\n",
+        "\n",
+        "print('numbers_set =', numbers_set)\n",
+        "\n",
+        "info_dictionary = {'key': 1, 'lock' : 2}\n",
+        "numbers_set = {'a', 'b'}\n",
+        "\n",
+        "# add keys of dictionary to the set\n",
+        "numbers_set.update(info_dictionary, string_alphabet)\n",
+        "print('numbers_set =', numbers_set)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_UQj1UzMN6tl"
+      },
+      "source": [
+        "## NOTE:\n",
+        "<font color=\"green\">**No Indexing in sets**</font>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "uEGD5u-xN6tl"
+      },
+      "source": [
+        "## <font color=\"green\">**Removing Elements from Sets**</font>\n",
+        "\n",
+        "* <font color=\"red\">remove()</font>:\n",
+        "\n",
+        "   ** The remove() removes the specified element from the set and updates the set. It doesn't return any value.\n",
+        "   \n",
+        "   ** If the element passed to remove() doesn't exist, KeyError exception is thrown.\n",
+        "\n",
+        "* <font color=\"red\">discard()</font>:\n",
+        "\n",
+        "    ** The discard() method removes a specified element from the set (if present).\n",
+        "\n",
+        "    ** This method returns None (meaning, absence of a return value).\n",
+        "    \n",
+        "* <font color=\"red\"> pop()</font>:\n",
+        "\n",
+        "    ** The pop() method removes an arbitrary element from the set and returns the element removed.\n",
+        "    \n",
+        "    ** The pop() method doesn't take any arguments.\n",
+        "    \n",
+        "    RETURNS:\n",
+        "    ** The pop() method returns an arbitrary (random) element from the set.\n",
+        "    \n",
+        "    ** Also, the set is updated and will not contain the element (which is returned).\n",
+        "\n",
+        "    ** If the set is empty, TypeError exception is raised.\n",
+        "    \n",
+        "    \n",
+        "* <font color=\"red\">clear()</font>: works common with all data structures.\n",
+        "\n",
+        "\n",
+        "<font color=\"red\">Note</font>: remove() gives the error if the element is not present in the set\n",
+        "whereas discard does not give the error"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "iBeeX4C-N6tm"
+      },
+      "source": [
+        "> EXAMPLE 1"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "mbKBfYzCN6tm",
+        "outputId": "5244abef-08db-46d3-d386-ea20c8665ed2"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Updated language set: {'French', 'English'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "# language set\n",
+        "language = {'English', 'French', 'German'}\n",
+        "\n",
+        "# removing 'German' from language\n",
+        "language.remove('German')\n",
+        "\n",
+        "# Updated language set\n",
+        "print('Updated language set:', language)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "g1XllOY-N6tm",
+        "outputId": "cccca8c0-241d-4b45-e409-67763dad746f"
+      },
+      "outputs": [
+        {
+          "ename": "KeyError",
+          "evalue": "'Germani'",
+          "output_type": "error",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+            "Cell \u001b[0;32mIn[84], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m language\u001b[39m.\u001b[39;49mremove(\u001b[39m'\u001b[39;49m\u001b[39mGermani\u001b[39;49m\u001b[39m'\u001b[39;49m)\n",
+            "\u001b[0;31mKeyError\u001b[0m: 'Germani'"
+          ]
+        }
+      ],
+      "source": [
+        "language.remove('Germani')"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Hd_MfKfZN6tm"
+      },
+      "source": [
+        "> EXAMPLE 2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "9gLY0lYkN6tm",
+        "outputId": "72294bc3-4cd5-46f6-8cde-f1f33d1ac75f"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "numbers =  {2, 4, 5}\n",
+            "numbers =  {2, 4, 5}\n"
+          ]
+        }
+      ],
+      "source": [
+        "numbers = {2, 3, 4, 5}\n",
+        "\n",
+        "numbers.discard(3)\n",
+        "print('numbers = ', numbers)\n",
+        "\n",
+        "numbers.discard(10)\n",
+        "print('numbers = ', numbers)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "IVy15KKbN6tm",
+        "outputId": "bd7c9dc2-3e98-49ce-ed0a-cdb539dd9f50"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Return Value is d\n",
+            "A =  {'a', 'b', 'c'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "A ={'a', 'b', 'c', 'd'}\n",
+        "\n",
+        "print('Return Value is', A.pop())\n",
+        "print('A = ', A)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1WzJOl9aN6tm"
+      },
+      "source": [
+        "> EXAMPLE 3:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_5eT9ILTxUzd",
+        "outputId": "ec67e37b-0672-4b42-eec4-062f1f2787e0"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "{2, 3, 5, 6, 8, 10, 12}\n"
+          ]
+        },
+        {
+          "data": {
+            "text/plain": [
+              "{2, 3, 5, 6, 8, 10, 12}"
+            ]
+          },
+          "execution_count": 91,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "print(roll_numbers)\n",
+        "roll_numbers.discard(4)\n",
+        "roll_numbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PcmT5Jeaxinz",
+        "outputId": "9e05917c-f87c-430b-b697-94f65f3a1650"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "{2, 3, 5, 6, 8, 10, 12}\n"
+          ]
+        },
+        {
+          "ename": "KeyError",
+          "evalue": "13",
+          "output_type": "error",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+            "Cell \u001b[0;32mIn[92], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39mprint\u001b[39m(roll_numbers)\n\u001b[0;32m----> 2\u001b[0m roll_numbers\u001b[39m.\u001b[39;49mremove(\u001b[39m13\u001b[39;49m)\n\u001b[1;32m      3\u001b[0m roll_numbers\n",
+            "\u001b[0;31mKeyError\u001b[0m: 13"
+          ]
+        }
+      ],
+      "source": [
+        "print(roll_numbers)\n",
+        "roll_numbers.remove(13)\n",
+        "roll_numbers"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8wyX3nlKyIuD"
+      },
+      "source": [
+        "*remove() gives the error if the element is not present in the set\n",
+        "whereas discard does not give the error*"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZADbHGQ0yi4T",
+        "outputId": "d99a61e3-754d-4d35-edd2-5080918f0c70"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "{2, 3, 5, 6, 8, 10, 12}"
+            ]
+          },
+          "execution_count": 89,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "# pop() in sets\n",
+        "roll_numbers.pop() # removes the random element\n",
+        "roll_numbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pnJXDJwdy0z0",
+        "outputId": "b33d796e-9a0e-49c0-a664-9ba1cbbc3661"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "set()"
+            ]
+          },
+          "execution_count": 74,
+          "metadata": {
+            "tags": []
+          },
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "# clear() in sets\n",
+        "roll_numbers.clear()   #remove all items in set\n",
+        "roll_numbers"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RdpSV8ZGN6tn"
+      },
+      "source": [
+        "## <font color=\"green\">**Operations on Sets**</font>\n",
+        "\n",
+        "* <font color=\"green\">**union**</font>: The Python set union() method returns a new set with distinct elements from all the sets.\n",
+        "  The syntax of union() is:\n",
+        "\n",
+        "        A.union(*other_sets)\n",
+        "\n",
+        "  Note: * is not part of the syntax. It is used to indicate that the method can take 0 or more arguments.\n",
+        "  \n",
+        "  RETURNS:\n",
+        "  \n",
+        "    ** The union() method returns a new set with elements from the set and all other sets (passed as an argument).\n",
+        "    \n",
+        "    ** If the argument is not passed to union(), it returns a shallow copy of the set.\n",
+        "    \n",
+        "\n",
+        "* <font color=\"green\">**intersection**</font>: The intersection() method returns a new set with elements that are common to all sets.\n",
+        "  The syntax of intersection() in Python is:\n",
+        "\n",
+        "        A.intersection(*other_sets)\n",
+        "        \n",
+        "  Note: * is not part of the syntax. It is used to indicate that the method can take 0 or more arguments.\n",
+        "  \n",
+        "  RETURNS:\n",
+        "  \n",
+        "    ** intersection() method returns the intersection of set A with all the sets (passed as argument).\n",
+        "\n",
+        "    ** If the argument is not passed to intersection(), it returns a shallow copy of the set (A).\n",
+        "\n",
+        "\n",
+        "* <font color=\"green\">**difference**</font>: The difference() method returns the set difference of two sets.\n",
+        "  The syntax of difference() method in Python is:\n",
+        "\n",
+        "       A.difference(B)\n",
+        "\n",
+        "  Here, A and B are two sets. The following syntax is equivalent to A-B.\n",
+        "  \n",
+        "  RETURNS:\n",
+        "  \n",
+        "    ** difference() method returns the difference between two sets which is also a set.\n",
+        "    \n",
+        "    ** It doesn't modify original sets."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JtSbFKiqN6tn"
+      },
+      "source": [
+        "## UNION\n",
+        "\n",
+        "> EXAMPLE 1:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "viG2f3ZIzHcn",
+        "outputId": "9e90641e-58ab-499e-dcdf-1f893550af70"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1, 2, 3, 4, 5, 6, 7}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 68
+        }
+      ],
+      "source": [
+        "set1 = {1, 2, 3, 4, 5}\n",
+        "set2 = {3, 4, 5, 6, 7}\n",
+        "\n",
+        "# union of 2 sets using | operator\n",
+        "set3 = set1 | set2\n",
+        "set3"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pgnTFm07N6tn"
+      },
+      "source": [
+        "> EXAMPLE 2:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "dudDdMcfN6tn",
+        "outputId": "ee1e27ba-af3a-42e3-849f-ccfbea6b2e9b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "A U B = {2, 'a', 'd', 'c'}\n",
+            "B U C = {1, 2, 3, 'd', 'c'}\n",
+            "A U B U C = {1, 2, 'a', 3, 'd', 'c'}\n",
+            "A.union() = {'d', 'a', 'c'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "A = {'a', 'c', 'd'}\n",
+        "B = {'c', 'd', 2 }\n",
+        "C = {1, 2, 3}\n",
+        "\n",
+        "print('A U B =', A.union(B))\n",
+        "print('B U C =', B.union(C))\n",
+        "print('A U B U C =', A.union(B, C))\n",
+        "print('A.union() =', A.union())"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "r_VLpqxhN6tn"
+      },
+      "source": [
+        "> EXAMPLE 3:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "hEj3TluzN6tn",
+        "outputId": "26768bf8-2300-4d94-8949-e4c14f8cdd89"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "A U B = {2, 'a', 'd', 'c'}\n",
+            "B U C = {1, 2, 3, 'd', 'c'}\n",
+            "A U B U C = {1, 2, 'a', 3, 'd', 'c'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Set Union Using the | Operator\n",
+        "A = {'a', 'c', 'd'}\n",
+        "B = {'c', 'd', 2 }\n",
+        "C = {1, 2, 3}\n",
+        "\n",
+        "print('A U B =', A| B)\n",
+        "print('B U C =', B | C)\n",
+        "print('A U B U C =', A | B | C)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "sMT7YnEyN6tn"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "iWVMBYj2N6tn"
+      },
+      "source": [
+        "## INTERSECTION"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "8E-wQM__N6to",
+        "outputId": "1970c457-5f98-4b25-ca6f-b7f66ce875e6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{2, 5}\n",
+            "{2}\n",
+            "{2, 3}\n",
+            "{2}\n"
+          ]
+        }
+      ],
+      "source": [
+        "# intersection\n",
+        "A = {2, 3, 5, 4}\n",
+        "B = {2, 5, 100}\n",
+        "C = {2, 3, 8, 9, 10}\n",
+        "\n",
+        "print(B.intersection(A))\n",
+        "print(B.intersection(C))\n",
+        "print(A.intersection(C))\n",
+        "print(C.intersection(A, B))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A.difference(B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "s3VPPPnDdeMs",
+        "outputId": "47b5fec6-07c3-4355-bed8-d90db9d328e8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{3, 4}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 66
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "B.difference(A)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5gceWNymdiBQ",
+        "outputId": "4613f933-4004-42ec-cad8-62f14ef169b8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{100}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 67
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Dw4aAhzPN6to",
+        "outputId": "2c229683-6900-46e6-e73c-2ab6af2c0703"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "{7}\n",
+            "{100}\n",
+            "set()\n",
+            "set()\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Set Intersection Using & operator\n",
+        "A = {100, 7, 8}\n",
+        "B = {200, 4, 5}\n",
+        "C = {300, 2, 3, 7}\n",
+        "D = {100, 200, 300}\n",
+        "\n",
+        "print(A & C)\n",
+        "print(A & D)\n",
+        "\n",
+        "\n",
+        "print(A & C & D)\n",
+        "print(A & B & C & D)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "u7cZ6gyHN6to"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "BqvpkRa9N6to"
+      },
+      "source": [
+        "## DIFFERENCE"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "nyDAkHW1N6to",
+        "outputId": "a81c5527-4f0b-4e03-d57c-feecadf48a0c"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "{'a', 'b', 'd'}\n",
+            "{'f', 'g'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "# difference\n",
+        "A = {'a', 'b', 'c', 'd'}\n",
+        "B = {'c', 'f', 'g'}\n",
+        "\n",
+        "# Equivalent to A-B\n",
+        "print(A.difference(B))\n",
+        "\n",
+        "# Equivalent to B-A\n",
+        "print(B.difference(A))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nsoAt8m9N6tp"
+      },
+      "source": [
+        "> ### MORE EXAMPLES"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "set1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uJro14D4d4uw",
+        "outputId": "411c72a3-aa5b-4c2d-f060-e86f73f780ba"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1, 2, 3, 4, 5}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 70
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "set2"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lUF9N8tMd6ZR",
+        "outputId": "62162606-5b77-4bde-8d67-da63f1d3156b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{3, 4, 5, 6, 7}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 71
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "w9nlIkql0M48",
+        "outputId": "2a537ca2-241c-4d90-c047-6f6b703397ed"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Union of set 1 and 2 {1, 2, 3, 4, 5, 6, 7}\n",
+            "Intesection of set 1 and 2 {3, 4, 5}\n",
+            "Difference of set 1 and 2 {1, 2}\n",
+            "Symmetric Difference of set 1 and 2 {1, 2, 6, 7}\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Union of set 1 and 2\", set1.union(set2))\n",
+        "print(\"Intesection of set 1 and 2\", set1.intersection(set2))\n",
+        "print(\"Difference of set 1 and 2\", set1.difference(set2))\n",
+        "print(\"Symmetric Difference of set 1 and 2\",set1.symmetric_difference(set2))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "D3T2IqLt0uzh"
+      },
+      "source": [
+        "# **issubset()**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ezCU3MJq0tYc",
+        "outputId": "bc6d75f2-4714-4d68-f107-7a65fa7d63bc"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "set '1' is subset of '2' ? False\n",
+            "set '2' is subset of '1' ? True\n"
+          ]
+        }
+      ],
+      "source": [
+        "set1 = {\"a\",\"b\",\"c\",\"d\",\"e\"}\n",
+        "set2 = {\"c\",\"d\"}\n",
+        "\n",
+        "print(\"set '1' is subset of '2' ?\", set1.issubset(set2)) #check set 1  is subset of set 2\n",
+        "\n",
+        "print(\"set '2' is subset of '1' ?\", set2.issubset(set1)) # check set 2 is subset of set 1"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Debugging Dilemma\n",
+        "\n",
+        "### Questions\n",
+        "\n",
+        "    Question 1. Write a Python program to create a set of numbers from 1 to 10 and check if 5 is present in the set.\n",
+        "\n",
+        "    Question 2. Write a Python program to remove the intersection of a given set of numbers with another given set.\n",
+        "    \n",
+        "    Question 3. Write a Python program to find the union of two sets.\n",
+        "    \n",
+        "    Question 4. Write a Python program to find the intersection of two sets.\n",
+        "    \n",
+        "    Question 5. Write a Python program to find the difference between two sets.\n",
+        "    \n",
+        "    Question 6. Write a Python program to check if a given set is a subset of another set.\n",
+        "    \n",
+        "    Question 7. Write a Python program to add an element to a set.\n",
+        "    \n",
+        "    Question 8. Write a Python program to remove an element from a set.\n",
+        "    \n",
+        "    Question 9. Write a Python program to find the length of a set.\n",
+        "    \n",
+        "    Question 10. Write a Python program to create a set of unique characters from a given string."
+      ],
+      "metadata": {
+        "id": "u8kZx4myv13h"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('\\nSolution 1')\n",
+        "\n",
+        "numbers = set(range(1, 11))\n",
+        "if 5 in numbers:\n",
+        "    print(\"5 is present in the set\")\n",
+        "else:\n",
+        "    print(\"5 is not present in the set\")\n",
+        "\n",
+        "print('\\nSolution 2')\n",
+        "\n",
+        "set1 = {1, 2, 3, 4, 5}\n",
+        "set2 = {4, 5, 6, 7, 8}\n",
+        "intersection = set1.intersection(set2)\n",
+        "set1 -= intersection\n",
+        "print(set1)\n",
+        "\n",
+        "print('\\nSolution 3')\n",
+        "\n",
+        "set1 = {1, 2, 3}\n",
+        "set2 = {3, 4, 5}\n",
+        "union = set1.union(set2)\n",
+        "print(union)\n",
+        "\n",
+        "print('\\nSolution 4')\n",
+        "\n",
+        "set1 = {1, 2, 3}\n",
+        "set2 = {3, 4, 5}\n",
+        "intersection = set1.intersection(set2)\n",
+        "print(intersection)\n",
+        "\n",
+        "print('\\nSolution 5')\n",
+        "\n",
+        "set1 = {1, 2, 3}\n",
+        "set2 = {3, 4, 5}\n",
+        "difference = set1.difference(set2)\n",
+        "print(difference)\n",
+        "\n",
+        "print('\\nSolution 6')\n",
+        "\n",
+        "set1 = {1, 2, 3, 4, 5}\n",
+        "set2 = {2, 4, 5}\n",
+        "if set2.issubset(set1):\n",
+        "    print(\"set2 is a subset of set1\")\n",
+        "else:\n",
+        "    print(\"set2 is not a subset of set1\")\n",
+        "\n",
+        "print('\\nSolution 7')\n",
+        "\n",
+        "\n",
+        "numbers = {1, 2, 3}\n",
+        "numbers.add(4)\n",
+        "print(numbers)\n",
+        "\n",
+        "print('\\nSolution 8')\n",
+        "\n",
+        "numbers = {1, 2, 3, 4}\n",
+        "numbers.discard(3)\n",
+        "print(numbers)\n",
+        "\n",
+        "print('\\nSolution 9')\n",
+        "\n",
+        "numbers = {1, 2, 3, 4}\n",
+        "print(len(numbers))\n",
+        "\n",
+        "print('\\nSolution 10')\n",
+        "\n",
+        "string = \"hello\"\n",
+        "unique_chars = set(string)\n",
+        "print(unique_chars)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "76M_Cufow4n4",
+        "outputId": "3621c4da-8afa-437a-88ab-64074a5d1572"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Solution 1\n",
+            "5 is present in the set\n",
+            "\n",
+            "Solution 2\n",
+            "{1, 2, 3}\n",
+            "\n",
+            "Solution 3\n",
+            "{1, 2, 3, 4, 5}\n",
+            "\n",
+            "Solution 4\n",
+            "{3}\n",
+            "\n",
+            "Solution 5\n",
+            "{1, 2}\n",
+            "\n",
+            "Solution 6\n",
+            "set2 is a subset of set1\n",
+            "\n",
+            "Solution 7\n",
+            "{1, 2, 3, 4}\n",
+            "\n",
+            "Solution 8\n",
+            "{1, 2, 4}\n",
+            "\n",
+            "Solution 9\n",
+            "4\n",
+            "\n",
+            "Solution 10\n",
+            "{'h', 'o', 'l', 'e'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1aUvS4dWN6tp"
+      },
+      "source": [
+        "# <font color='green'>**DICTIONARY**</font>\n",
+        "\n",
+        "* Dictionaries are used to store key-value pairs.\n",
+        "\n",
+        "* Mutable\n",
+        "\n",
+        "* we can't have two entries with the same key.\n",
+        "\n",
+        "* A regular dict doesn’t track the insertion order, and iterating it gives the values in an arbitrary order.\n",
+        "\n",
+        "\n",
+        "To understand better, think of a phone directory where hundreds and thousands of names and their corresponding numbers have been added. Now the constant values here are Name and the Phone Numbers which are called as the keys. And the various names and phone numbers are the values that have been fed to the keys. If you access the values of the keys, you will obtain all the names and phone numbers. So that is what a key-value pair is. And in Python, this structure is stored using Dictionaries.\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "sbDfgz_V3-SU"
+      },
+      "source": [
+        "# **Dict Declaration and Intialization**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart = {'cake': 20, 'milk': 70, 'chips': 20, 'can': '$90'}"
+      ],
+      "metadata": {
+        "id": "yHgXIyW2VGRA"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart['milk'] ='$20'"
+      ],
+      "metadata": {
+        "id": "mJk87SXvVGOC"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7LzQ2hoe39zs",
+        "outputId": "ad393728-93e0-48c4-9a9e-28e2663cac92"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "{'shirt': 5000, 't-shirt': 4500}\n",
+            "{'name': 'satish', 1: ['abc', 'xyz']}\n",
+            "{'shirt': 5000, 't-shirt': 4500}\n"
+          ]
+        }
+      ],
+      "source": [
+        "#empty dictionary\n",
+        "cart = {}\n",
+        "#dictionary with integer keys\n",
+        "cart = {'shirt': 5000, 't-shirt': 4500}\n",
+        "print(cart)\n",
+        "#dictionary with mixed keys\n",
+        "cart = {'name': 'satish', 1: ['abc', 'xyz']}\n",
+        "print(cart)\n",
+        "#create empty dictionary using dict()\n",
+        "cart = dict()\n",
+        "cart = dict([('shirt', 5000), ('t-shirt', 4500)])    #create a dict with list of tuples\n",
+        "print(cart)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dmeKaPJUN6tq"
+      },
+      "source": [
+        "## <font color='green'>Changing and Adding key, value pair</font>\n",
+        "\n",
+        "\n",
+        "Dictionaries can be created using the curly braces or using the dict() function. You need to add the key-value pairs whenever you work with dictionaries.\n",
+        "\n",
+        "To change the values of the dictionary, you need to do that using the keys. So, you firstly access the key and then change the value accordingly. To add values, you simply just add another key-value pair as shown below.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "aoJoZsUHN6tq",
+        "outputId": "9f2101ca-462f-4243-c9e3-e46776b2af34"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "{'First': 'Python', 'Second': 'Java'}\n",
+            "{'First': 'Python', 'Second': 'C++'}\n",
+            "{'First': 'Python', 'Second': 'C++', 'Third': 'Ruby'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "my_dict = {'First': 'Python', 'Second': 'Java'}\n",
+        "print(my_dict)\n",
+        "\n",
+        "my_dict['Second'] = 'C++' #changing element\n",
+        "print(my_dict)\n",
+        "\n",
+        "my_dict['Third'] = 'Ruby' #adding key-value pair\n",
+        "print(my_dict)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "uUMrY8Rzfn3P"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_bnS_6NzV47B",
+        "outputId": "e5c313e5-af8f-4b50-9257-ee68c50735a8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'cake': 20, 'milk': '$20', 'chips': 20, 'can': '$90'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 53
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart.keys()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Vpo1Ob6CV44O",
+        "outputId": "1ebc4a14-e413-4828-da3d-8ad7bec5329e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_keys(['cake', 'milk', 'chips', 'can'])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 54
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart.values()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YLNLrMcuWBGv",
+        "outputId": "da127a29-31da-41fa-f9c4-3d401bdedf88"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_values([20, '$20', 20, '$90'])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 55
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart.items()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XwQPF0wdWBD9",
+        "outputId": "24c7b65f-1288-4bec-ff2e-3d8d3119dd14"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_items([('cake', 20), ('milk', '$20'), ('chips', 20), ('can', '$90')])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 56
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart.get('flour', 90)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qK0f5b3NWBBL",
+        "outputId": "a8e2a49a-bb88-4a6d-c704-ee1340691e62"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "90"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 62
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cart.get(\"adsfasd\", 50)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0xXfEzoogGBQ",
+        "outputId": "f308d322-328e-4855-b18d-4218397922d2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "50"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 79
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "yY6UHtYp4FdD"
+      },
+      "source": [
+        "# **Dict Access**"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nj8vW1uNN6tq"
+      },
+      "source": [
+        "## <font color='green'>Accessing Elements</font>\n",
+        "* You can access elements using the key.\n",
+        "\n",
+        "*  <font color='green'>get()</font>: method returns the value for the specified key if key is in dictionary. Also called Safe Accessing,\n",
+        "              \n",
+        "              dict.get(key[, value])\n",
+        "        \n",
+        "    ** key - key to be searched in the dictionary\n",
+        "    \n",
+        "    ** value (optional) - Value to be returned if the key is not found. The default value is None.\n",
+        "    \n",
+        "    RETURNS:\n",
+        "    \n",
+        "    ** the value for the specified key if key is in dictionary.\n",
+        "    \n",
+        "    ** None if the key is not found and value is not specified.\n",
+        "    \n",
+        "    ** value if the key is not found and value is specified.\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zV3IIFJh30je",
+        "outputId": "8960dd86-962b-4b0b-c347-74c55b872d46"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "5000\n"
+          ]
+        }
+      ],
+      "source": [
+        "#get item\n",
+        "print(cart['shirt'])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 180
+        },
+        "id": "V43S42qC4PgQ",
+        "outputId": "45c9fb0f-d0c1-4815-89a4-125539bb67bc"
+      },
+      "outputs": [
+        {
+          "ename": "KeyError",
+          "evalue": "'trousers'",
+          "output_type": "error",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+            "Cell \u001b[0;32mIn[109], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#if key is not present it gives KeyError\u001b[39;00m\n\u001b[0;32m----> 2\u001b[0m \u001b[39mprint\u001b[39m(cart[\u001b[39m'\u001b[39;49m\u001b[39mtrousers\u001b[39;49m\u001b[39m'\u001b[39;49m])\n",
+            "\u001b[0;31mKeyError\u001b[0m: 'trousers'"
+          ]
+        }
+      ],
+      "source": [
+        "#if key is not present it gives KeyError\n",
+        "print(cart['trousers'])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UxciF0bB4Tu5",
+        "outputId": "5fb5d0b4-ec48-4cbe-c006-628d5e16078b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "5000\n"
+          ]
+        }
+      ],
+      "source": [
+        "#another way of accessing key\n",
+        "print(cart.get('shirt'))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2Z4lpQxF4VW2",
+        "outputId": "561da574-6a76-453f-9fec-dfebbc5a3b4b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "None\n"
+          ]
+        }
+      ],
+      "source": [
+        "#if key is not present it will give None using get method\n",
+        "print(cart.get('trousers'))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "pIrpziWEN6tq",
+        "outputId": "86475dfa-08e3-4217-e975-339707e38c7b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Python\n",
+            "Java\n"
+          ]
+        }
+      ],
+      "source": [
+        "my_dict = {'First': 'Python', 'Second': 'Java'}\n",
+        "print(my_dict['First']) #access elements using keys\n",
+        "print(my_dict.get('Second','element does not exist'))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "GpFhXjjL4YB2"
+      },
+      "source": [
+        "# **Dict Add or Modify Elements**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BV9t1WUW4Y_T",
+        "outputId": "8963c67b-3924-44b6-c617-6f1af6dbd2d1"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "{'shirt': 4000, 't-shirt': 4500}"
+            ]
+          },
+          "execution_count": 85,
+          "metadata": {
+            "tags": []
+          },
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "#update price\n",
+        "cart['shirt'] = 4000\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PBOWVi2V4h7b",
+        "outputId": "53abacf1-97e0-42a6-e94d-d75b665c266f"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "{'shirt': 4000, 't-shirt': 4500, 'trouser': 500}"
+            ]
+          },
+          "execution_count": 86,
+          "metadata": {
+            "tags": []
+          },
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "#add new key\n",
+        "cart['trouser'] = 500\n",
+        "cart\n",
+        "l = [1,2,3]\n",
+        "l[2] = 4"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "V6NLyPpS4lxf"
+      },
+      "source": [
+        "# **Dict Delete or Remove Element**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eD5lXwRS4m8G",
+        "outputId": "dd9aa6e5-7fb1-48a5-84e5-7274a1a266ec"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "4000\n",
+            "{'t-shirt': 4500, 'trouser': 500}\n"
+          ]
+        }
+      ],
+      "source": [
+        "#remove a particular item\n",
+        "print(cart.pop('shirt'))\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QcHppI5e4qmT",
+        "outputId": "9f778135-6cb4-4322-c983-3caedcfe6b9b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "{'t-shirt': 4500}\n"
+          ]
+        }
+      ],
+      "source": [
+        "#remove an arbitarty key\n",
+        "cart.popitem()\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LvNddV8747zf",
+        "outputId": "054c8233-1f4d-4b42-8d26-58733634ddd6"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "{}"
+            ]
+          },
+          "execution_count": 87,
+          "metadata": {
+            "tags": []
+          },
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "cart.clear()\n",
+        "cart"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MTq_qkwBN6tr"
+      },
+      "source": [
+        "## <font color='green'>Deleting key, value pairs</font>\n",
+        "\n",
+        "* <font color='red'>**pop()**</font>: The pop() method removes and returns an element from a dictionary having the given key.\n",
+        "\n",
+        "  The syntax of pop() method is\n",
+        "\n",
+        "          dictionary.pop(key[, default])\n",
+        "          \n",
+        "  \n",
+        "   ** key - key which is to be searched for removal\n",
+        "   ** default - value which is to be returned when the key is not in the dictionary\n",
+        "  \n",
+        "  The pop() method returns:\n",
+        "\n",
+        "    If key is found - removed/popped element from the dictionary\n",
+        "    If key is not found - value specified as the second argument (default)\n",
+        "    If key is not found and default argument is not specified - KeyError exception is raised\n",
+        "\n",
+        "\n",
+        "* <font color='red'>**popitem()**</font>: The Python popitem() method removes and returns the last element (key, value) pair inserted into the dictionary. It doesn't take any parameters.\n",
+        "\n",
+        "    The popitem() method removes and returns the (key, value) pair from the dictionary in the Last In, First Out (LIFO) order.\n",
+        "\n",
+        "    ** Returns the latest inserted element (key,value) pair from the dictionary.\n",
+        "    \n",
+        "    ** Removes the returned element pair from the dictionary.\n",
+        "\n",
+        "\n",
+        "* <font color='red'>**clear()**</font>: works as same of list\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Hi8LTPICN6tr",
+        "outputId": "785afb13-0755-4ddd-a9b3-a97d9ca1f2c8"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Value: Ruby\n",
+            "Def Return: return this is searching key does not exist\n",
+            "Dictionary: {'First': 'Python', 'Second': 'Java'}\n",
+            "Key, value pair: ('Second', 'Java')\n",
+            "Dictionary {'First': 'Python'}\n",
+            "n {}\n"
+          ]
+        }
+      ],
+      "source": [
+        "my_dict = {'First': 'Python', 'Second': 'Java', 'Third': 'Ruby'}\n",
+        "\n",
+        "pop_element = my_dict.pop('Third') #pop element\n",
+        "default_val = my_dict.pop('Third', \"return this is searching key does not exist\")\n",
+        "print('Value:', pop_element)\n",
+        "print('Def Return:', default_val)\n",
+        "print('Dictionary:', my_dict)\n",
+        "\n",
+        "\n",
+        "b = my_dict.popitem() #pop the key-value pair\n",
+        "print('Key, value pair:', b)\n",
+        "print('Dictionary', my_dict)\n",
+        "\n",
+        "\n",
+        "my_dict.clear() #empty dictionary\n",
+        "print('n', my_dict)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "sJ_gRqvu5MEg"
+      },
+      "source": [
+        "# **Dictionary Methods**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cT8FqDYv5M_Y",
+        "outputId": "a620344c-5ce8-46dd-e12a-8f44828ddea7"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "dict_items([('shirt', 5000), ('t-shirt', 4500), ('watch', 10000), ('trousers', 500)])"
+            ]
+          },
+          "execution_count": 17,
+          "metadata": {
+            "tags": []
+          },
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "cart = {'shirt': 5000, 't-shirt': 4500, 'watch': 10000, 'trousers': 500}\n",
+        "cart.items()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JL8c1cht5eO9",
+        "outputId": "0c3d7d3f-b77a-4669-a708-c54d702592c0"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "dict_keys(['shirt', 't-shirt', 'watch', 'trousers'])"
+            ]
+          },
+          "execution_count": 18,
+          "metadata": {
+            "tags": []
+          },
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "cart.keys()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yFNnHrkW5i4H",
+        "outputId": "e2c8fbcb-9eca-4c1e-d4a2-80ac32cb9f86"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "dict_values([5000, 4500, 10000, 500])"
+            ]
+          },
+          "execution_count": 19,
+          "metadata": {
+            "tags": []
+          },
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "cart.values()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "K62ocQ0r5pAR",
+        "outputId": "a98550be-5f3d-4878-a697-b8d4a3d694a5"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "shirt -> Rs. 5000\n",
+            "t-shirt -> Rs. 4500\n",
+            "watch -> Rs. 10000\n",
+            "trousers -> Rs. 500\n"
+          ]
+        }
+      ],
+      "source": [
+        "for item, price in cart.items():\n",
+        "  print(item,\"-> Rs.\",price)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# ***Development Dash***"
+      ],
+      "metadata": {
+        "id": "l8tIGUjx5SRd"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Dictionary problems\n",
+        "\n",
+        "    1. Write a Python program to add an item to a dictionary.\n",
+        "    \n",
+        "    2. Write a Python program to remove an item from a dictionary.\n",
+        "    \n",
+        "    3. Write a Python program to modify an item in a dictionary.\n",
+        "    \n",
+        "    4. Write a Python program to print all keys and values of a dictionary.\n",
+        "    \n",
+        "    5. Write a Python program to sort a dictionary by values.\n",
+        "\n",
+        "    6. Write a Python program to concatenate two dictionaries.\n",
+        "\n",
+        "    7. Write a Python program to find the highest 3 values in a dictionary.\n",
+        "\n",
+        "    8. Write a Python program to remove duplicates values from a dictionary."
+      ],
+      "metadata": {
+        "id": "EEH1b_dcN6ts"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solutions\n",
+        "\n",
+        "print('\\nSolution 1')\n",
+        "\n",
+        "my_dict = {'apple': 2, 'banana': 3, 'cherry': 5}\n",
+        "my_dict['orange'] = 4\n",
+        "print(my_dict)\n",
+        "\n",
+        "print('\\nSolution 2')\n",
+        "\n",
+        "my_dict = {'apple': 2, 'banana': 3, 'cherry': 5}\n",
+        "del my_dict['banana']\n",
+        "print(my_dict)\n",
+        "\n",
+        "\n",
+        "print('\\nSolution 3')\n",
+        "\n",
+        "my_dict = {'apple': 2, 'banana': 3, 'cherry': 5}\n",
+        "my_dict['banana'] = 4\n",
+        "print(my_dict)\n",
+        "\n",
+        "print('\\nSolution 4')\n",
+        "\n",
+        "my_dict = {'apple': 2, 'banana': 3, 'cherry': 5}\n",
+        "for key, value in my_dict.items():\n",
+        "    print(key, value)\n",
+        "\n",
+        "\n",
+        "print('\\nSolution 5')\n",
+        "\n",
+        "my_dict = {'apple': 2, 'banana': 3, 'cherry': 5}\n",
+        "sorted_dict = {k: v for k, v in sorted(my_dict.items(), key=lambda item: item[1])}\n",
+        "print(sorted_dict)\n",
+        "\n",
+        "\n",
+        "print('\\nSolution 6')\n",
+        "\n",
+        "dict1 = {'apple': 2, 'banana': 3}\n",
+        "dict2 = {'cherry': 5, 'orange': 4}\n",
+        "concatenated_dict = {**dict1, **dict2}\n",
+        "print(concatenated_dict)\n",
+        "\n",
+        "print('\\nSolution 7')\n",
+        "\n",
+        "my_dict = {'apple': 2, 'banana': 3, 'cherry': 5, 'orange': 4, 'pear': 6}\n",
+        "sorted_values = sorted(my_dict.values(), reverse=True)\n",
+        "highest_3 = sorted_values[:3]\n",
+        "print(highest_3)\n",
+        "\n",
+        "print('\\nSolution 8')\n",
+        "\n",
+        "my_dict = {'apple': 2, 'banana': 3, 'cherry': 5, 'orange': 4, 'pear': 6, 'mango': 3}\n",
+        "unique_dict = {}\n",
+        "for key, value in my_dict.items():\n",
+        "    if value not in unique_dict.values():\n",
+        "        unique_dict[key] = value\n",
+        "print(unique_dict)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZYKaKD_R6oYb",
+        "outputId": "ce776236-4813-474b-a2d9-f4d0f96a5f51"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Solution 1\n",
+            "{'apple': 2, 'banana': 3, 'cherry': 5, 'orange': 4}\n",
+            "\n",
+            "Solution 2\n",
+            "{'apple': 2, 'cherry': 5}\n",
+            "\n",
+            "Solution 3\n",
+            "{'apple': 2, 'banana': 4, 'cherry': 5}\n",
+            "\n",
+            "Solution 4\n",
+            "apple 2\n",
+            "banana 3\n",
+            "cherry 5\n",
+            "\n",
+            "Solution 5\n",
+            "{'apple': 2, 'banana': 3, 'cherry': 5}\n",
+            "\n",
+            "Solution 6\n",
+            "{'apple': 2, 'banana': 3, 'cherry': 5, 'orange': 4}\n",
+            "\n",
+            "Solution 7\n",
+            "[6, 5, 4]\n",
+            "\n",
+            "Solution 8\n",
+            "{'apple': 2, 'banana': 3, 'cherry': 5, 'orange': 4, 'pear': 6}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questions:\n",
+        "\n",
+        "Question 1: Write a Python program to create a set of numbers from 1 to 10 and check if 5 is present in the set.\n",
+        "\n",
+        "Question 2: Write a Python program to remove the intersection of a given set of numbers with another given set.\n",
+        "\n",
+        "Question 3: Write a Python program to find the union of two sets.\n",
+        "\n",
+        "Question 4: Write a Python program to find the intersection of two sets.\n",
+        "\n",
+        "Question 5: Write a Python program to find the difference between two sets.\n",
+        "\n",
+        "Question 6: Write a Python program to check if a given set is a subset of another set.\n",
+        "\n",
+        "Question 7: Write a Python program to add an element to a set.\n",
+        "\n",
+        "Question 8: Write a Python program to remove an element from a set.\n",
+        "\n",
+        "Question 9: Write a Python program to find the length of a set.\n",
+        "\n",
+        "Questions  10: Write a Python program to create a set of unique characters from a given string."
+      ],
+      "metadata": {
+        "id": "H9tnvnLf8wED"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solutions\n",
+        "\n",
+        "print(\"\\nSolution1\")\n",
+        "number = {1,2,3,4,5,6,7,8,9,10,11}\n",
+        "\n",
+        "if 5 in number:\n",
+        "  print(\"5 is present\")\n",
+        "else:\n",
+        "  print(\"Nott present\")\n",
+        "\n",
+        "print(\"\\nSolution2\")\n",
+        "\n",
+        "set1 = {1, 2, 3, 4, 5}\n",
+        "set2 = {4, 5, 6, 7, 8}\n",
+        "intersection = set1.intersection(set2)\n",
+        "set1 -= intersection\n",
+        "print(set1)\n",
+        "\n",
+        "print(\"\\nSolution3\")\n",
+        "\n",
+        "set1 = {1, 2, 3}\n",
+        "set2 = {3, 4, 5}\n",
+        "union = set1.union(set2)\n",
+        "print(union)\n",
+        "\n",
+        "print(\"\\nSolution4\")\n",
+        "\n",
+        "set1 = {1, 2, 3}\n",
+        "set2 = {3, 4, 5}\n",
+        "intersection = set1.intersection(set2)\n",
+        "print(intersection)\n",
+        "\n",
+        "print(\"\\nSolution5\")\n",
+        "\n",
+        "set1 = {1, 2, 3}\n",
+        "set2 = {3, 4, 5}\n",
+        "difference = set1.difference(set2)\n",
+        "print(difference)\n",
+        "\n",
+        "print(\"\\nSolution6\")\n",
+        "\n",
+        "set1 = {1, 2, 3, 4, 5}\n",
+        "set2 = {2, 4, 5}\n",
+        "if set2.issubset(set1):\n",
+        "    print(\"set2 is a subset of set1\")\n",
+        "else:\n",
+        "    print(\"set2 is not a subset of set1\")\n",
+        "\n",
+        "print(\"\\nSolution7\")\n",
+        "\n",
+        "set1 = {1, 2, 3, 4, 5}\n",
+        "set2 = {4, 5, 6, 7, 8}\n",
+        "intersection = set1.intersection(set2)\n",
+        "set1 -= intersection\n",
+        "print(set1)\n",
+        "\n",
+        "print(\"\\nSolution8\")\n",
+        "\n",
+        "set1 = {1, 2, 3, 4, 5}\n",
+        "set2 = {4, 5, 6, 7, 8}\n",
+        "intersection = set1.intersection(set2)\n",
+        "set1 -= intersection\n",
+        "print(set1)\n",
+        "\n",
+        "print(\"\\nSolution9\")\n",
+        "\n",
+        "numbers = {1, 2, 3, 4}\n",
+        "print(len(numbers))\n",
+        "\n",
+        "print(\"\\nSolution10\")\n",
+        "\n",
+        "string = \"hello\"\n",
+        "unique_chars = set(string)\n",
+        "print(unique_chars)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TeKTUnmm_ggz",
+        "outputId": "284ad3f0-4877-4e20-e03f-0426aad93eae"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Solution1\n",
+            "5 is present\n",
+            "\n",
+            "Solution2\n",
+            "{1, 2, 3}\n",
+            "\n",
+            "Solution3\n",
+            "{1, 2, 3, 4, 5}\n",
+            "\n",
+            "Solution4\n",
+            "{3}\n",
+            "\n",
+            "Solution5\n",
+            "{1, 2}\n",
+            "\n",
+            "Solution6\n",
+            "set2 is a subset of set1\n",
+            "\n",
+            "Solution7\n",
+            "{1, 2, 3}\n",
+            "\n",
+            "Solution8\n",
+            "{1, 2, 3}\n",
+            "\n",
+            "Solution9\n",
+            "4\n",
+            "\n",
+            "Solution10\n",
+            "{'h', 'o', 'l', 'e'}\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": [
+        "unOuuem9Wb_4"
+      ]
+    },
+    "kernelspec": {
+      "display_name": "Python 3 (ipykernel)",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.7.15"
+    },
+    "vscode": {
+      "interpreter": {
+        "hash": "916dbcbb3f70747c44a77c7bcd40155683ae19c65e1c03b4aa3499c5328201f1"
+      }
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
