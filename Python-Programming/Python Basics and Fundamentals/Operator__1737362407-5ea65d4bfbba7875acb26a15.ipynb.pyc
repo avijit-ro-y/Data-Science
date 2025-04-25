@@ -1,0 +1,1018 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "id": "f877eb8a",
+      "metadata": {
+        "id": "f877eb8a"
+      },
+      "source": [
+        "# Operators in Python\n",
+        "\n",
+        "Operators are unique symbols that indicate a computation of some kind has to be done and the values on which these computations are performed are known as operands.\n",
+        "\n",
+        "Types of Operators in Python\n",
+        "1. Arithmetic Operators\n",
+        "2. Comparison Operators\n",
+        "3. Logical Operators\n",
+        "4. Bitwise Operators\n",
+        "5. Assignment Operators\n",
+        "6. Identity Operators\n",
+        "7. Membership Operators\n",
+        "8. Ternary Operator"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "44be080c",
+      "metadata": {
+        "id": "44be080c"
+      },
+      "source": [
+        "## 1. Arithmetic Operators\n",
+        "\n",
+        "Arithmetic operators are used to perform basic mathematical operations like `addition, subtraction, multiplication, and division`.\n",
+        "\n",
+        "\n",
+        "|Operator|Description|Syntax|\n",
+        "|-----|-------|------|\n",
+        "|+|Addition|x + y|\n",
+        "|-|Subtraction|x - y|\n",
+        "|*|Multiplication|x * y|\n",
+        "|/|Division|x / y|\n",
+        "|//|Floor Division|x // y|\n",
+        "|%|Modulus|x % y|\n",
+        "|**|Power|x ** y|\n",
+        "\n",
+        "### Precedence of Arithmetic Operators in Python\n",
+        "\n",
+        "|Parentheses| > Exponentiation| > Multiplication, Division|> Addition, Subtraction|\n",
+        "|----|----|----|----|\n",
+        "|()|**|*, /|+,-|\n",
+        "\n",
+        "- Multiplication and division have same precedence\n",
+        "- Addition and subtraction have the same precedence\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "c6ff4cca",
+      "metadata": {
+        "id": "c6ff4cca",
+        "outputId": "6a415983-f00a-4b22-bf90-39d8e5432fac"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Operands are: 5 and 3\n",
+            "Addition: 8\n",
+            "Subtraction: 2\n",
+            "Multiplication: 15\n",
+            "Division: 1.6666666666666667\n",
+            "Floor division: 1\n",
+            "Mudulo: 2\n",
+            "Exponent: 125\n"
+          ]
+        }
+      ],
+      "source": [
+        "a = 5\n",
+        "b = 3\n",
+        "\n",
+        "# Addition of numbers\n",
+        "addition = a + b\n",
+        "\n",
+        "# Subtraction of numbers\n",
+        "subtraction = a - b\n",
+        "\n",
+        "# Multiplication of numbers\n",
+        "multiplication = a * b\n",
+        "\n",
+        "# divison of a by b\n",
+        "division = a / b\n",
+        "\n",
+        "# floor division of a by b\n",
+        "floor_division = a // b\n",
+        "\n",
+        "# Modulo of a by b\n",
+        "modulo = a % b\n",
+        "\n",
+        "# Power\n",
+        "exponent = a ** b # 5^3\n",
+        "\n",
+        "print(\"Operands are:\", a, \"and\", b)\n",
+        "print(\"Addition:\", addition)\n",
+        "print(\"Subtraction:\", subtraction)\n",
+        "print(\"Multiplication:\", multiplication)\n",
+        "print(\"Division:\", division)\n",
+        "print(\"Floor division:\", floor_division)\n",
+        "print(\"Mudulo:\", modulo)\n",
+        "print(\"Exponent:\", exponent)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "68e11e4b",
+      "metadata": {
+        "id": "68e11e4b"
+      },
+      "source": [
+        "Resource: [Benefits of Double Division Operator over Single Division Operator in Python](https://www.geeksforgeeks.org/benefits-of-double-division-operator-over-single-division-operator-in-python/#:~:text=input%20in%20Python-,Benefits%20of%20Double%20Division%20Operator%20over%20Single%20Division%20Operator%20in%20Python,-Difficulty%20Level%20%3A)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "da18262e",
+      "metadata": {
+        "id": "da18262e",
+        "outputId": "1369ebf1-afba-4e96-8dd9-3acdefe9708f"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter first number: 5\n",
+            "Enter second number: 2\n",
+            "Enter third number: -2\n",
+            "5.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Question: 1\n",
+        "# take 3 numbers as input from user and store the result of adding these numbers in a variable named \"output\"\n",
+        "# and print the value of output variable\n",
+        "\n",
+        "# Solution\n",
+        "\n",
+        "num_1 = float(input(\"Enter first number: \"))\n",
+        "num_2 = float(input(\"Enter second number: \"))\n",
+        "num_3 = float(input(\"Enter third number: \"))\n",
+        "\n",
+        "output = num_1 + num_2 + num_3\n",
+        "\n",
+        "print(output)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "c1efd307",
+      "metadata": {
+        "id": "c1efd307"
+      },
+      "source": [
+        "## 2. Comparison Operators in Python\n",
+        "\n",
+        "Relational operators in python compares the values. It either returns True or False according to the condition.\n",
+        "\n",
+        "|Operator|Description|Syntax|\n",
+        "|-----|-------|------|\n",
+        "|>|Greather than|x > y|\n",
+        "|<|Less than|x < y|\n",
+        "|==|Equal to|x == y|\n",
+        "|!=|Not equal to|x != y|\n",
+        "|>=|Greater than or equal to|x >= y|\n",
+        "|<=|Less that or equal to|x <= y|\n",
+        "\n",
+        "`NOTE: `= is an assignement operator and == comparison operator\n",
+        "\n",
+        "### Precedence of Comparison Operators in Python\n",
+        "\n",
+        "- The precendence of comparison operators have lower precedence than the airthmetic operators.\n",
+        "- However, all the operators within comparison operators have same precedence"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "3 != 5\n",
+        "\n",
+        "# ==\n",
+        "# ="
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kbjnNw9QD3RY",
+        "outputId": "6f30e574-c839-48bc-802c-97ef7466931b"
+      },
+      "id": "kbjnNw9QD3RY",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "f78b7c8b",
+      "metadata": {
+        "id": "f78b7c8b",
+        "outputId": "4187cef9-c0d0-4ffb-a589-fb07538146fc"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "a: 5 b: 3\n",
+            "a greater than b: True\n",
+            "a less than b: False\n",
+            "a equals to b: False\n",
+            "a not equal to b: True\n",
+            "a greater than equal to b True\n",
+            "a less than equal to b False\n"
+          ]
+        }
+      ],
+      "source": [
+        "a = 5\n",
+        "b = 3\n",
+        "\n",
+        "print(\"a:\", a, \"b:\", b)\n",
+        "print(\"a greater than b:\", a > b)\n",
+        "\n",
+        "print(\"a less than b:\", a < b)\n",
+        "\n",
+        "print(\"a equals to b:\", a == b)\n",
+        "\n",
+        "print(\"a not equal to b:\", a != b)\n",
+        "\n",
+        "print(\"a greater than equal to b\", a >= b)\n",
+        "\n",
+        "print(\"a less than equal to b\", a <= b)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "a76d30ce",
+      "metadata": {
+        "id": "a76d30ce"
+      },
+      "source": [
+        "## 3.Logical Operators in Python\n",
+        "\n",
+        "The logical operators in python perform the Logical AND, Logical OR, and Logical NOT operations. It is used to combine the conditional statements.\n",
+        "\n",
+        "|Operator|Description|Syntax|\n",
+        "|-----|-------|------|\n",
+        "|and|True is both the operands are true than|x and y|\n",
+        "|or|True if either of the operands is true|x or y|\n",
+        "|not|True is the operand is false|not x|\n",
+        "\n",
+        "### Precedence of Logical Operators\n",
+        "\n",
+        "<center><b>Logical AND > Logical OR > Logical NOT</center></b>\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "D_inJ6xFDu36"
+      },
+      "id": "D_inJ6xFDu36",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "KjqXkYBHElJA"
+      },
+      "id": "KjqXkYBHElJA",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "25d39f00",
+      "metadata": {
+        "id": "25d39f00",
+        "outputId": "5f977ad9-4b4e-4355-acc1-4d9c70b3d99e"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "True and False: False\n",
+            "True or False: True\n",
+            "not True: False\n"
+          ]
+        }
+      ],
+      "source": [
+        "# assigning boolean values to variables\n",
+        "a = True\n",
+        "b = False\n",
+        "\n",
+        "print(f\"{a} and {b}: {a and b}\")\n",
+        "print(f\"{a} or {b}: {a or b}\")\n",
+        "print(f\"not {a}: {not a}\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "fb618e0f",
+      "metadata": {
+        "id": "fb618e0f",
+        "outputId": "bef13017-85b1-40ff-b800-67aa83350d60"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter num1: 5\n",
+            "Enter num2: 9\n",
+            "False\n",
+            "True\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Question: 2\n",
+        "# Take two integers as input from user and\n",
+        "# then use comparison operator \">\" to check if num1 > num2\n",
+        "# store the result of comparison in another variable named \"output\" and\n",
+        "# on the output varibale apply the \"not\" operator and print it\n",
+        "\n",
+        "# Solution\n",
+        "num1 = int(input(\"Enter num1: \"))\n",
+        "num2 = int(input(\"Enter num2: \"))\n",
+        "\n",
+        "output = num1 > num2\n",
+        "\n",
+        "print(output)\n",
+        "print(not output)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "742c519a",
+      "metadata": {
+        "id": "742c519a"
+      },
+      "source": [
+        "## 4.Bitwise Operators\n",
+        "\n",
+        "To operate on binary numbers we can use Bitwise operators in python. These operators act on bits and perform bit-by-bit operations.\n",
+        "\n",
+        "|Operator|Description|Syntax|\n",
+        "|-----|-------|------|\n",
+        "|&|Bitwise AND| x & y|\n",
+        "|\\||Bitwise OR|x | y|\n",
+        "|~|Bitwise NOT| ~x |\n",
+        "|^|Bitwise XOR| x^ y|\n",
+        "|>>|Bitwise right shift| x>> |\n",
+        "|<<|Bitwise left shift| x<< |\n",
+        "\n",
+        "### Precedence of Logical Operators\n",
+        "\n",
+        "<center><b>Bitwise NOT > Bitwise Shift > Bitwise AND > Bitwise XOR > Bitwise OR</center></b>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "37c1ff28",
+      "metadata": {
+        "id": "37c1ff28",
+        "outputId": "e7f398d1-7334-4f40-d153-a00dfbd4b963"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Here, '0b' at the start of binary number in the \n",
+            "below two statements is how python stores binary numbers\n",
+            "Binary Represention of 50: 0b110010\n",
+            "Binary Represention of 5: 0b101\n",
+            "\n",
+            "Bitwise AND on 50, 5: 0\n",
+            "\n",
+            "Bitwise OR on 50, 5: 55\n",
+            "\n",
+            "Bitwise NOT on 50: -51\n",
+            "\n",
+            "Bitwise XOR on 50, 5: 55\n",
+            "\n",
+            "Bitwise RIGHT SHIFT on 50: 12\n",
+            "\n",
+            "Bitwise LEFT SHIFT on 50: 200\n"
+          ]
+        }
+      ],
+      "source": [
+        "# assiging values to variables\n",
+        "a = 50 # 110010\n",
+        "b = 5 #  000101\n",
+        "\n",
+        "print(\"Here, '0b' at the start of binary number in the \\nbelow two statements is how python stores binary numbers\")\n",
+        "print(f\"Binary Represention of {a}: {bin(a)}\")\n",
+        "print(f\"Binary Represention of {b}: {bin(b)}\")\n",
+        "\n",
+        "# Print bitwise AND operation\n",
+        "print(f\"\\nBitwise AND on {a}, {b}: {a & b}\")\n",
+        "print(f\"\\nBitwise OR on {a}, {b}: {a | b}\")\n",
+        "print(f\"\\nBitwise NOT on {a}: {~a}\")\n",
+        "print(f\"\\nBitwise XOR on {a}, {b}: {a ^ b}\")\n",
+        "print(f\"\\nBitwise RIGHT SHIFT on {a}: {a >> 2}\")\n",
+        "print(f\"\\nBitwise LEFT SHIFT on {a}: {a << 2}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "use cases:\n",
+        "\n",
+        "fast operations, encryption, image processing, color manipulation"
+      ],
+      "metadata": {
+        "id": "GLuv9i5HLimJ"
+      },
+      "id": "GLuv9i5HLimJ"
+    },
+    {
+      "cell_type": "markdown",
+      "id": "f59070c0",
+      "metadata": {
+        "id": "f59070c0"
+      },
+      "source": [
+        "## 5.Assignment Operators\n",
+        "\n",
+        "To assign values in python the `assignment operators` are used.\n",
+        "\n",
+        "|Operator|Description|Syntax|\n",
+        "|-----|-------|------|\n",
+        "|=|Assigns value of the right side of the expression to the left side operand|x = y + z|\n",
+        "|+=|Add right side operand with left side operand and then assign to the left operand|a+=b  a = a + b|\n",
+        "|-=|Subtract right side operand from left operand and then assign to left operand|a-=b  a = a - b|\n",
+        "|*=|Multiply rught operand with left operand and then assign to left operand|a*=b  a = a * b|\n",
+        "|/=|Divide left operand with right operand and then assign to left operand|a/=b  a = a / b|\n",
+        "|%=|Takes modulus using left and right operands and assign the result to the left operand|a%=b  a = a % b|\n",
+        "|//=|Divide left operand with right operand and then assign the value(floor) to left operand|a //= b  a = a // b|\n",
+        "|**==|Calculate exponent value using operands and assign value to left operand|a**=b  a = a**b|\n",
+        "|&=|Performs Bitwise AND on operands and assign value to the left operand|\ta&=b  a=a&b|\n",
+        "|\\|=|Perform Bitwise OR on operands and assign value to the left operand|a\\|=b  a=a\\|b|\n",
+        "|^=|Perforn Bitwise XOR on operands and assign value to the left operand|a^=b     a=a^b|\n",
+        "|>>=|Perforns Bitwise right shift on operands and assign value to the left operand|a>>=b  a=a>>b|\n",
+        "|<<=|Performs Bitwise left shift on operands and assign value to the left operand|a <<= b  a= a << b|\n",
+        "\n",
+        "Some example on how these are used is shown below"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 10\n",
+        "\n",
+        "a -= 10 # a = 10 + 10\n",
+        "a"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OyoC_DsGFPfK",
+        "outputId": "5c693969-e0ea-44d4-ab4e-087b6995a0cd"
+      },
+      "id": "OyoC_DsGFPfK",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "0"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a += 10"
+      ],
+      "metadata": {
+        "id": "MeoQWJ4eFRY2"
+      },
+      "id": "MeoQWJ4eFRY2",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "5qQS4dCNFPcU"
+      },
+      "id": "5qQS4dCNFPcU",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "b2752c44",
+      "metadata": {
+        "id": "b2752c44",
+        "outputId": "75bf3f29-e578-4a58-a1fd-5fcf89847b64"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "15\n",
+            "5\n",
+            "50\n",
+            "2\n"
+          ]
+        }
+      ],
+      "source": [
+        "a = 10\n",
+        "b = 5\n",
+        "\n",
+        "# perform += opertor b+=a => b = b+a\n",
+        "b += a\n",
+        "print(b)\n",
+        "\n",
+        "# Subtract and assign value b-=a => b = b-a\n",
+        "b -= a\n",
+        "print(b)\n",
+        "\n",
+        "# multiply and assign b*=a => b = b * a\n",
+        "b *= a\n",
+        "print(b)\n",
+        "\n",
+        "# bitwise AND operator b&=a => b = b & a\n",
+        "b &= a\n",
+        "print(b)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "10ad9ac7",
+      "metadata": {
+        "id": "10ad9ac7",
+        "outputId": "2d151ee8-b24b-445b-c77c-00ae537de37c"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter a number: 8\n",
+            "Num after adding 5 to it: 13\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Question: 3\n",
+        "# Take a integer as an input from the user and use the += operator to add 5 to it and print the resulted value\n",
+        "\n",
+        "# Solution\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "num += 5\n",
+        "\n",
+        "print(\"Num after adding 5 to it:\", num)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "ee060367",
+      "metadata": {
+        "id": "ee060367"
+      },
+      "source": [
+        "## 6.Identity Operators\n",
+        "\n",
+        "Identity operators in Python are used to check if two values are located on the same part of the memory or not.\n",
+        "\n",
+        "|Operator|Description|Syntax|\n",
+        "|-----|-------|------|\n",
+        "|is|True if the operands are identical| a is b|\n",
+        "|is not|True if the operands are not identical|a is not b|\n",
+        "\n",
+        "`Note: `Two variables that are equal do not imply that they are identical."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 20\n",
+        "b = 15\n",
+        "c = 20\n",
+        "a is c"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "y2am-4PsF-j7",
+        "outputId": "c89c25b4-1542-4652-a779-969ed4334108"
+      },
+      "id": "y2am-4PsF-j7",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "id(a), id(b), id(c)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_06x2852GWJP",
+        "outputId": "de285a83-717c-4d09-efb0-b089fbd0a945"
+      },
+      "id": "_06x2852GWJP",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(140066255520592, 140066255520432, 140066255520592)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "6bd4e025",
+      "metadata": {
+        "id": "6bd4e025",
+        "outputId": "651a766b-a0cd-4208-8a6f-419bc0045039"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "is not operator between a, b:  True\n",
+            "is operator between a, c:  True\n"
+          ]
+        }
+      ],
+      "source": [
+        "a = 20\n",
+        "b = 15\n",
+        "c = a\n",
+        "\n",
+        "print(\"is not operator between a, b: \", a is not b)\n",
+        "print(\"is operator between a, c: \", a is c)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "db15cfa3",
+      "metadata": {
+        "id": "db15cfa3"
+      },
+      "source": [
+        "## 7.Membership Operators\n",
+        "\n",
+        "The membership operators are used to test whether a value or variable is in sequence or not.\n",
+        "\n",
+        "|Operator|Description|Syntax|\n",
+        "|-----|-------|------|\n",
+        "|in|True if value is found in sequence| a in b|\n",
+        "|not in|True if value not found in the sequence|a not in b|"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s = 'English'\n",
+        "\n",
+        "'u' not in s"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Xu8F2GK9Hmea",
+        "outputId": "9885fd35-5486-4c58-ce9b-a4e6512755b1"
+      },
+      "id": "Xu8F2GK9Hmea",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "34275b1f",
+      "metadata": {
+        "id": "34275b1f",
+        "outputId": "a29b3ebd-cc38-4c74-d788-f6c6218f0097"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "2 in [1, 2, 3, 4, 5]: True\n",
+            "8 not in [1, 2, 3, 4, 5]: True\n"
+          ]
+        }
+      ],
+      "source": [
+        "# assigning values to variables\n",
+        "x = 2\n",
+        "y = 8\n",
+        "\n",
+        "lst = [1, 2, 3, 4, 5]\n",
+        "\n",
+        "print(f\"{x} in {lst}: {x in lst}\")\n",
+        "print(f\"{y} not in {lst}: {y not in lst}\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "e6c65b99",
+      "metadata": {
+        "id": "e6c65b99",
+        "outputId": "6a2cf037-4bd3-4637-f157-8e028707b89e"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "True\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Question: 4\n",
+        "# Chect if the value 5 present in the given list [4, 9, 42, 5, 63]\n",
+        "\n",
+        "# Solution\n",
+        "\n",
+        "lst = [4, 9, 42, 5, 63]\n",
+        "\n",
+        "print( 5 in lst )"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "908fc152",
+      "metadata": {
+        "id": "908fc152"
+      },
+      "source": [
+        "## 8.Ternary Operator\n",
+        "\n",
+        "Termary operators also know as conditional expressons are operators that evalute something based on a condition being true or false. This was intruducend first in python version 2.5.\n",
+        "\n",
+        "Syntax:\n",
+        "\n",
+        "        [on_true] if [expression] else [on_false]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "74d18499",
+      "metadata": {
+        "id": "74d18499",
+        "outputId": "d8c68fc4-2436-4569-84a6-01c47df3761b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "5\n",
+            "15\n"
+          ]
+        }
+      ],
+      "source": [
+        "a = 10\n",
+        "b = 5\n",
+        "c = 15\n",
+        "\n",
+        "min_value = a if a < b else b\n",
+        "print(min_value)\n",
+        "\n",
+        "min_value = c if c > b  else b\n",
+        "print(min_value)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "c3bd87a2",
+      "metadata": {
+        "id": "c3bd87a2",
+        "outputId": "fe0ae8fc-faa9-4919-8a41-4991c5b9b8b9"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter num1: 8\n",
+            "Enter num2: 5\n",
+            "Hiiiiiii\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Question: 5\n",
+        "# Take to numbers as input from user and print \"Hiiiiiii\" if num1 is greater and \"helloooo\" if num2 is greate\n",
+        "\n",
+        "# Solution\n",
+        "num1 = float(input(\"Enter num1: \"))\n",
+        "num2 = float(input(\"Enter num2: \"))\n",
+        "\n",
+        "output = \"Hiiiiiii\" if num1 > num2 else \"helloooo\"\n",
+        "\n",
+        "print(output)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "id": "b8209721",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "b8209721",
+        "outputId": "c8c87704-47ff-427b-e82b-3f12001ef22d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "value 1:4\n",
+            "value2:4\n",
+            "8\n"
+          ]
+        }
+      ],
+      "source": [
+        "num1 = input('value 1:')\n",
+        "x = int(num1)\n",
+        "num2 = int(input('value2:'))\n",
+        "\n",
+        "add_result = num1 + num2\n",
+        "print(add_result)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "int('45')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ISO7vnwJJKpN",
+        "outputId": "47c8f5b4-2998-48bc-d992-6414756fa7bf"
+      },
+      "id": "ISO7vnwJJKpN",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "45"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 20
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = '4'\n",
+        "type(int(a))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sgDWyNmkKn_9",
+        "outputId": "6aabf2eb-32e6-4807-e5a9-4e0e104de92b"
+      },
+      "id": "sgDWyNmkKn_9",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "int"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num1 = '1'\n",
+        "num1 = int(num1)"
+      ],
+      "metadata": {
+        "id": "EV877dpIK6mj"
+      },
+      "id": "EV877dpIK6mj",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3 (ipykernel)",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8.16"
+    },
+    "colab": {
+      "provenance": []
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
