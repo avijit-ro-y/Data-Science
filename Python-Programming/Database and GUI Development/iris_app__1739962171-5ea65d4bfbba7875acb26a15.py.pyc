@@ -1,0 +1,58 @@
+import gradio as gr
+import joblib  # Assuming you're using a joblib-saved model
+import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+# Train and save the model
+# def train_and_save_model():
+#     iris = load_iris()
+#     X, y = iris.data, iris.target
+    
+#     scaler = StandardScaler()
+#     X_scaled = scaler.fit_transform(X)
+    
+#     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
+#     model = KNeighborsClassifier(n_neighbors=3)
+#     model.fit(X_train, y_train)
+    
+#     joblib.dump((model, scaler), "iris_classifier_knn.joblib")
+
+# train_and_save_model()
+
+def load_model():
+    # Load your ML model (replace 'iris_classifier_knn.joblib' with your actual model file)
+    model, scaler = joblib.load("iris_classifier_knn.joblib")
+    return model, scaler
+
+# Mapping of numerical labels to Iris species
+TARGET_NAMES = {0: "Setosa", 1: "Versicolor", 2: "Virginica"}
+
+def predict(input1, input2, input3, input4):
+    model, scaler = load_model()
+    scaled_input = scaler.transform([[input1, input2, input3, input4]])
+    prediction = model.predict(scaled_input)[0]
+    return TARGET_NAMES.get(prediction, "Unknown")
+
+# Create the Gradio Blocks interface
+with gr.Blocks() as demo:
+    gr.Markdown("# Iris Dataset Predictor")
+    gr.Markdown("Enter values and submit to get a prediction")
+    
+    with gr.Row():
+        input1 = gr.Number(label="Sepal Length")
+        input2 = gr.Number(label="Sepal Width")
+        input3 = gr.Number(label="Petal Length")
+        input4 = gr.Number(label="Petal Width")
+    
+    submit_btn = gr.Button("Submit")
+    output = gr.Textbox(label="Predicted Class")
+    
+    submit_btn.click(predict, inputs=[input1, input2, input3, input4], outputs=output)
+
+
+if __name__ == "__main__":
+    demo.launch()
+    # demo.launch(share=True)
