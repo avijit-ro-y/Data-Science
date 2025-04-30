@@ -1,0 +1,54 @@
+# Import the Selenium WebDriver module for interacting with browsers
+from selenium import webdriver
+
+# Import the Service class to configure and manage the ChromeDriver service
+from selenium.webdriver.chrome.service import Service
+
+# Import the By class for locating elements on a web page
+from selenium.webdriver.common.by import By
+
+# Import ChromeDriverManager from webdriver-manager to automatically install the correct ChromeDriver version
+from webdriver_manager.chrome import ChromeDriverManager
+
+# Import the time module to add delays for observation or waiting for actions to complete
+import time
+
+
+
+# Set up the Chrome WebDriver
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service)
+
+
+
+## Example 1
+# open the target website
+# driver.get("https://www.scrapingcourse.com/javascript-rendering")
+
+
+# # get the brand name element
+# brand_name = driver.find_element(By.CSS_SELECTOR, ".brand-name")
+# time.sleep(5)
+# # perform a click action
+# brand_name.click()
+
+# time.sleep(5)
+# # screenshot the result page
+# driver.save_screenshot("homepage-screenshot.png")
+
+
+### Example 2
+# driver.get("https://www.scrapingcourse.com/login")
+# # retrieve the form elements
+# email_input = driver.find_element(By.ID, "email")
+# password_input = driver.find_element(By.ID, "password")
+# submit_button = driver.find_element(By.ID, "submit-button")
+
+# # filling out the form elements
+# email_input.send_keys("admin@example.com")
+# password_input.send_keys("password")
+
+# time.sleep(10)
+# # submit the form and log in
+# submit_button.click()
+# time.sleep(10)
